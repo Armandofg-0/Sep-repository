@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sun Aug 31 21:57:22 2025
+| Date             : Sat Sep  6 17:41:38 2025
 | Host             : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.101        |
+| Total On-Chip Power (W)  | 0.106        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.008        |
+| Dynamic (W)              | 0.013        |
 | Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.8         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      289 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      137 |     17600 |            0.78 |
+| Slice Logic    |    <0.001 |      325 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      145 |     17600 |            0.82 |
 |   CARRY4       |    <0.001 |       31 |      4400 |            0.70 |
-|   Register     |    <0.001 |       83 |     35200 |            0.24 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |    <0.001 |      131 |       --- |             --- |
-| I/O            |     0.006 |       13 |       100 |           13.00 |
+|   Register     |    <0.001 |       95 |     35200 |            0.27 |
+|   Others       |     0.000 |       11 |       --- |             --- |
+| Signals        |    <0.001 |      148 |       --- |             --- |
+| I/O            |     0.011 |       15 |       100 |           15.00 |
 | Static Power   |     0.093 |          |           |                 |
-| Total          |     0.101 |          |           |                 |
+| Total          |     0.106 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.006 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.006 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,7 +147,7 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| top             |     0.008 |
+| top             |     0.013 |
 |   u_clk_manager |     0.001 |
 +-----------------+-----------+
 

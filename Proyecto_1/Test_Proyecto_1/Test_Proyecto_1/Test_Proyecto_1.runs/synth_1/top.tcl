@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
 set_msg_config  -id {[BD 41-1306]}  -suppress 
@@ -96,6 +94,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/clk_manager.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/led_controller.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/ruleta.vhd
+  C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/settings.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/state_machine.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/top_module.vhd
 }

@@ -8,13 +8,44 @@ entity clk_manager is
         clk             : in  STD_LOGIC;
         up              : in  STD_LOGIC; 
         special_clk_out : out STD_LOGIC;
-        stop            : out STD_LOGIC := '0'
+        stop            : out STD_LOGIC := '0';
+        level           : in integer
     );
 end clk_manager;
 -------------------------------------------------
 
 architecture Behavioral of clk_manager is
+
+
+function adjust_parameter (
+    parameter : integer;
+    level     : integer; 
+    numerator : integer; 
+    denominator: integer
+) return integer is
+
+    variable parameter_adjusted : integer;
+    
+    begin
+        
+        if (level=1) then
+            parameter_adjusted:=parameter;
+        elsif (level=2) then
+            parameter_adjusted:=(parameter/denominator)*numerator;
+        elsif (level=3) then
+            parameter_adjusted:=(((parameter/denominator)*numerator)/denominator)*numerator;
+        else
+            parameter_adjusted:=(((((parameter/denominator)*numerator)/denominator)*numerator)/denominator)*numerator;
+        end if;
+    
+    return parameter_adjusted;
+
+end adjust_parameter;
+
+
+
 begin
+
     process(clk)
         -- Variables internas
         variable special_clk   : std_logic := '0';
@@ -22,14 +53,24 @@ begin
         variable maximum       : integer := 31_250_000;
 
         -- Constantes
-        constant minimum       : integer := 7_812_500;
-        constant maximum_limit : integer := 31_250_000;
-        constant step          : integer := 366_210;
+        constant minimum_initial      : integer := 7_812_500;
+        constant maximum_limit        : integer := 31_250_000;
+        constant step_initial         : integer := 366_210;
+        
+        -- Variables dependientes de level (la dificultad del juego)
+        variable minimum  : integer := 7_812_500;
+        variable step     : integer := 366_210;
 
         -- Control interno
         variable running       : boolean := false;  -- Activa la cuenta luego de activar up 
         variable up_r          : std_logic := '0';  -- Detecta variación de up
+    
     begin
+        
+        -- se aplica función adjust_parameter para ajustar minimum y step a la dificultad del juego
+        minimum := adjust_parameter ( minimum_initial, level, 3, 4);
+        step    := adjust_parameter ( step_initial, level, 4, 3);
+        
         if rising_edge(clk) then
             -- Asignación base
             special_clk_out <= special_clk;

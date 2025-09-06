@@ -19,9 +19,12 @@ set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { sw[3] 
 ##Buttons
 set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { btn_enter }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
 set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn_up }]; #IO_L24N_T3_34 Sch=btn[1]
-#set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { btn_extra }]; #IO_L10P_T1_AD11P_35 Sch=btn[2]
+set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { btn2 }]; #IO_L10P_T1_AD11P_35 Sch=btn[2]
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { btn_extra }]; #IO_L7P_T1_34 Sch=btn[3]
 
+# btn_enter -> btn0
+# btn_up -> btn 1
+# btn_extra -> btn3
 
 ##LEDs
 set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { leds[0] }]; #IO_L23P_T3_35 Sch=led[0]
@@ -37,8 +40,8 @@ set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { leds[3
 
 ##RGB LED 6
 #set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { led6_r }]; #IO_L18P_T2_34 Sch=led6_r
-set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports { rgb }]; #IO_L6N_T0_VREF_35 Sch=led6_g
-#set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { led6_b }]; #IO_L8P_T1_AD10P_35 Sch=led6_b
+set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports { rgb_g }]; #IO_L6N_T0_VREF_35 Sch=led6_g
+set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { rgb_b }]; #IO_L8P_T1_AD10P_35 Sch=led6_b
 
 
 ##Audio Codec
