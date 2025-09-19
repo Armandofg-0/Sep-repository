@@ -5,9 +5,9 @@ entity settings is
     Port (
         clk   : in std_logic;
         state : in std_logic_vector (1 downto 0);
-        btn2  : in std_logic;
-        btn1  : in std_logic;
-        level : out integer:= 1;
+        btn_1  : in std_logic;
+        btn_2  : in std_logic;
+        difficulty : out STD_LOGIC_VECTOR(3 downto 0):= "1000";
         led   : out std_logic_vector (3 downto 0):= "1000");
 end settings;
 
@@ -17,7 +17,7 @@ begin
 
 process(clk)
 
-variable difficulty : std_logic_vector (3 downto 0) := "1000";
+variable level : std_logic_vector (3 downto 0) := "1000";
 
 begin
     
@@ -26,27 +26,27 @@ begin
     
        if rising_edge(clk) then
        
-            led <= difficulty;
+            led <= level;
             
-            if (difficulty = "1000") then
-                level <= 1;
-                if (btn1='1') then
-                    difficulty:="1100";
+            if (level = "1000") then
+                difficulty <= level;
+                if (btn_1='1') then
+                    level:="1100";
                 end if;
-            elsif (difficulty="1100") then
-                level <= 2;
-                if(btn2='1') then
-                    difficulty:="1110";
+            elsif (level="1100") then
+                difficulty <= level;
+                if(btn_1='1') then
+                    level:="1110";
                 end if;
-            elsif (difficulty="1110") then
-                level <= 3;
-                if(btn1='1') then
-                    difficulty:="1111";
+            elsif (level="1110") then
+                difficulty <= level;
+                if(btn_1='1') then
+                    level:="1111";
                 end if;
-            elsif (difficulty="1111") then
-                level <= 4;
-                if(btn2='1') then
-                    difficulty:="1000";
+            elsif (level="1111") then
+                difficulty <= level;
+                if(btn_1='1') then
+                    level:="1000";
                 end if;
             end if;
             

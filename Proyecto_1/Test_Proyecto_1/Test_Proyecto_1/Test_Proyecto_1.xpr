@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/fuent/Desktop/Repositorio Sep/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="b248d8fb53db4b38b0b7c737fd8a9948"/>
@@ -69,6 +69,12 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/new/Debouncing_Button_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/apuesta.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../Proyecto_1_SEP/Proyecto_1_SEP.srcs/sources_1/new/apuesta.vhd"/>

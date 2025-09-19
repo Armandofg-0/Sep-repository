@@ -3,109 +3,90 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 -------------------------------------------------
 entity clk_manager is
-    Port (
+    generic (
+        CLK_FREQ_HZ : integer := 125_000_000  -- frecuencia del clk principal
+    );
+    port (
         state           : in  std_logic_vector(1 downto 0); 
-        clk             : in  STD_LOGIC;
-        up              : in  STD_LOGIC; 
-        special_clk_out : out STD_LOGIC;
-        stop            : out STD_LOGIC := '0';
-        level           : in integer
+        clk             : in  std_logic;
+        btn_3            : in  std_logic; 
+        special_clk_out : out std_logic;
+        stop            : out std_logic := '0';
+        difficulty      : in std_logic_vector(3 downto 0)
     );
 end clk_manager;
 -------------------------------------------------
-
 architecture Behavioral of clk_manager is
 
+    -- Constantes base (calculadas de manera conveninte)
+    constant MINIMUM_BASE : integer := CLK_FREQ_HZ / 16;   -- antes 7_812_500 con 125MHz
+    constant STEP_BASE    : integer := CLK_FREQ_HZ / 341;  -- antes 366_210 con 125MHz
+    constant MAX_LIMIT    : integer := CLK_FREQ_HZ / 4;    -- antes 31_250_000 con 125MHz
 
-function adjust_parameter (
-    parameter : integer;
-    level     : integer; 
-    numerator : integer; 
-    denominator: integer
-) return integer is
-
-    variable parameter_adjusted : integer;
-    
-    begin
-        
-        if (level=1) then
-            parameter_adjusted:=parameter;
-        elsif (level=2) then
-            parameter_adjusted:=(parameter/denominator)*numerator;
-        elsif (level=3) then
-            parameter_adjusted:=(((parameter/denominator)*numerator)/denominator)*numerator;
-        else
-            parameter_adjusted:=(((((parameter/denominator)*numerator)/denominator)*numerator)/denominator)*numerator;
-        end if;
-    
-    return parameter_adjusted;
-
-end adjust_parameter;
-
-
+    -- Señales a configurar según dificultad
+    signal minimum : integer;
+    signal step    : integer;
 
 begin
 
+    -----------------------------------------------------------------
+    -- Configuración según dificultad (1000 fácil ? 1111 muy difícil)
+    -----------------------------------------------------------------
+    with difficulty select minimum <=
+        MINIMUM_BASE                     when "1000",  -- Fácil
+        (MINIMUM_BASE * 3) / 4           when "1100",  -- Medio (0.75)
+        (MINIMUM_BASE * 2) / 3           when "1110",  -- Difícil (0.666...)
+        MINIMUM_BASE / 2                 when others;  -- Muy difícil (0.5)
+
+    with difficulty select step <=
+        STEP_BASE                        when "1000",  -- Fácil
+        (STEP_BASE * 5) / 4              when "1100",  -- Medio (1.25)
+        (STEP_BASE * 7) / 4              when "1110",  -- Difícil (1.75)
+        STEP_BASE * 2                    when others;  -- Muy difícil (2.0)
+
+    --------------------
+    -- Proceso principal
+    --------------------
     process(clk)
-        -- Variables internas
-        variable special_clk   : std_logic := '0';
-        variable counter       : integer := 0;
-        variable maximum       : integer := 31_250_000;
-
-        -- Constantes
-        constant minimum_initial      : integer := 7_812_500;
-        constant maximum_limit        : integer := 31_250_000;
-        constant step_initial         : integer := 366_210;
-        
-        -- Variables dependientes de level (la dificultad del juego)
-        variable minimum  : integer := 7_812_500;
-        variable step     : integer := 366_210;
-
-        -- Control interno
-        variable running       : boolean := false;  -- Activa la cuenta luego de activar up 
-        variable up_r          : std_logic := '0';  -- Detecta variación de up
-    
+        variable special_clk : std_logic := '0';
+        variable counter     : integer := 0;
+        variable maximum     : integer := 0;
+        variable running     : boolean := false;
+        variable up_r        : std_logic := '0';
     begin
-        
-        -- se aplica función adjust_parameter para ajustar minimum y step a la dificultad del juego
-        minimum := adjust_parameter ( minimum_initial, level, 3, 4);
-        step    := adjust_parameter ( step_initial, level, 4, 3);
-        
         if rising_edge(clk) then
-            -- Asignación base
+            -- salida por defecto
             special_clk_out <= special_clk;
 
-            -----------------------------------------------------------------
-            -- Resetea valores cuando state /= "10"
-            -----------------------------------------------------------------
+            -----------------------------------------
+            -- Reset de valores cuando state /= "10"
+            -----------------------------------------
             if state /= "10" then
                 counter     := 0;
-                maximum     := maximum_limit;
+                maximum     := MAX_LIMIT;
                 special_clk := '0';
                 stop        <= '0';
                 special_clk_out <= '0';
                 running     := false; 
-                up_r     := '0';
+                up_r        := '0';
 
             -----------------------------------------------------------------
             -- Funcionamiento normal cuando state = "10"
             -----------------------------------------------------------------
             else
-                -- Detecta activación de up
-                if (up = '1' and up_r = '0') then
+                -- detectar flanco de btn_3
+                if (btn_3 = '1' and up_r = '0') then
                     running := true;
                 end if;
-                up_r := up;
+                up_r := btn_3;
 
-                -- proceso inicia solo con activación de up
+                -- solo avanza si running=true
                 if running then
-                
-                    -- Continúa si up sigue activo.
-                    if (up = '1') then
+                    if (btn_3 = '1') then
                         -- AUMENTANDO VELOCIDAD
                         if (counter = maximum) then
                             counter := 0;
-                            special_clk := NOT special_clk;
+                            special_clk := not special_clk;
 
                             if (maximum >= minimum) then
                                 maximum := maximum - step;
@@ -113,17 +94,16 @@ begin
                         else
                             counter := counter + 1;
                         end if;
-
                     else
                         -- DISMINUYENDO VELOCIDAD
-                        if (maximum >= maximum_limit) then
+                        if (maximum >= MAX_LIMIT) then
                             stop <= '1';
                         else
                             if (counter = maximum) then
                                 counter := 0;
-                                special_clk := NOT special_clk;
+                                special_clk := not special_clk;
 
-                                if (maximum <= maximum_limit) then
+                                if (maximum <= MAX_LIMIT) then
                                     maximum := maximum + step;
                                 end if;
                             else
@@ -131,8 +111,9 @@ begin
                             end if;
                         end if;
                     end if;
-                end if; -- (detección activación)
-            end if; -- (detección state)
-        end if; -- (rising_edge)
+                end if; -- running
+            end if; -- state
+        end if; -- clk
     end process;
+
 end Behavioral;

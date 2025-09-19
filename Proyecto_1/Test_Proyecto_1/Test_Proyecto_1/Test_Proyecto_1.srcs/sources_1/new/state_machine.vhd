@@ -5,11 +5,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity state_machine is
     Port (
         clk      : in  STD_LOGIC;
-        enter    : in  STD_LOGIC;
         stop     : in  STD_LOGIC;
-        finaliza : in  std_logic;
         state    : out STD_LOGIC_VECTOR(1 DOWNTO 0) := "00";
-        btn_extra : in std_logic
+        btn_0 : in std_logic
     );
 end state_machine;
 -------------------------------------------------------
@@ -27,7 +25,7 @@ begin
         if rising_edge(clk) then
         
         -- Reset solo al finalizar un ciclo entero:
-            if finaliza = '1' and enter = '1' then
+            if (current_state = resultado) and (btn_0 = '1') then
                 current_state <= idle;  
                 
         -- Actualiza estado actual:        
@@ -40,7 +38,7 @@ begin
     ------------------------------------------
     -- Parte combinacional: Next state logic
     ------------------------------------------
-    next_state_logic: process(current_state, enter, stop)
+    next_state_logic: process(current_state, btn_0, stop)
     begin
         -- Default: Se mantiene en estado actual
         next_state <= current_state;
@@ -50,14 +48,14 @@ begin
         -- Estado 0: idle
             when idle =>
                 state <= "00";  
-                if btn_extra = '1' then
+                if btn_0 = '1' then
                     next_state <= apuesta;
                 end if;
                 
         -- Estado 1: apuesta        
             when apuesta =>
                 state <= "01";  
-                if enter = '1' then
+                if btn_0 = '1' then
                     next_state <= ruleta;
                 end if;
  
