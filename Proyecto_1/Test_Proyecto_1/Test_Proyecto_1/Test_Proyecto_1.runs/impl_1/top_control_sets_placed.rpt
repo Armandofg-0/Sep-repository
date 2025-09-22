@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Sep  6 17:41:18 2025
+| Date         : Fri Sep 19 18:14:16 2025
 | Host         : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     9 |
-|    Minimum number of control sets                        |     9 |
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    25 |
+| Unused register locations in slices containing registers |    47 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     9 |
-| >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     6 |
-| >= 6 to < 8        |     1 |
+| Total control sets |    14 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,30 +58,35 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            5 |
+| No           | No                    | No                     |              21 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               5 |            2 |
-| Yes          | No                    | No                     |              16 |            5 |
+| No           | Yes                   | No                     |              53 |           16 |
+| Yes          | No                    | No                     |              20 |            8 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              63 |           16 |
+| Yes          | Yes                   | No                     |              67 |           17 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+----------------------------------------------------------+-----------------------+------------------+----------------+--------------+
-|          Clock Signal          |                       Enable Signal                      |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------+----------------------------------------------------------+-----------------------+------------------+----------------+--------------+
-|  u_clk_manager/special_clk_out |                                                          |                       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                 | u_state_machine/FSM_sequential_current_state_reg[0]_0    |                       |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG                 | u_state_machine/FSM_sequential_current_state_reg[1]_1    |                       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                 | u_state_machine/E[0]                                     |                       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                 | u_state_machine/FSM_sequential_current_state_reg[1]_0[0] |                       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                 |                                                          | u_state_machine/clear |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG                 |                                                          |                       |                4 |              7 |         1.75 |
-|  clk_IBUF_BUFG                 | u_clk_manager/maximum[31]_i_2_n_0                        | u_state_machine/clear |                8 |             31 |         3.88 |
-|  clk_IBUF_BUFG                 | u_clk_manager/counter                                    | u_state_machine/clear |                8 |             32 |         4.00 |
-+--------------------------------+----------------------------------------------------------+-----------------------+------------------+----------------+--------------+
++--------------------------------+-----------------------------------+-------------------------------+------------------+----------------+--------------+
+|          Clock Signal          |           Enable Signal           |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+-----------------------------------+-------------------------------+------------------+----------------+--------------+
+|  u_clk_manager/special_clk_out |                                   |                               |                2 |              2 |         1.00 |
+|  u_clk_manager/special_clk_out |                                   | u_ruleta/reset_req            |                2 |              4 |         2.00 |
+|  u_clk_manager/special_clk_out | u_ruleta/led0                     | u_ruleta/reset_req            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                 | settings_menu/difficulty0         |                               |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                 | settings_menu/level0              |                               |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                 | u_state_machine/sw3_r             |                               |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                 | u_state_machine/E[0]              |                               |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                 | u_apuesta/guess[3]_i_1_n_0        |                               |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                 |                                   | u_state_machine/clear         |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                 |                                   |                               |                9 |             19 |         2.11 |
+|  clk_IBUF_BUFG                 |                                   | u_btn0/counter[21]_i_1_n_0    |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG                 |                                   | u_btn1/counter[21]_i_1__0_n_0 |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG                 | u_clk_manager/maximum[31]_i_1_n_0 | u_state_machine/clear         |                8 |             31 |         3.88 |
+|  clk_IBUF_BUFG                 | u_clk_manager/counter             | u_state_machine/clear         |                8 |             32 |         4.00 |
++--------------------------------+-----------------------------------+-------------------------------+------------------+----------------+--------------+
 
 

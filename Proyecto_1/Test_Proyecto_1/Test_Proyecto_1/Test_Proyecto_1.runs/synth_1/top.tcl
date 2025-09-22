@@ -90,6 +90,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/Debouncing_Button_VHDL.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/apuesta.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/clk_manager.vhd
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Test_Proyecto_1/Test_Proyecto_1.srcs/sources_1/new/led_controller.vhd
