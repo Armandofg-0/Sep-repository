@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1759426211"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1759426211"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1759426211"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1759426211"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1759436408"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1759436408"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1759436408"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1759436408"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_1_led_controller_0_0\design_1_led_controller_0_0.xci" Type="IP">
         <Instance HierarchyPath="led_controller_0"/>
@@ -73,6 +73,62 @@
       </File>
       <File Name="ip\design_1_debouncer_2_0\design_1_debouncer_2_0.xci" Type="IP">
         <Instance HierarchyPath="debouncer_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi_traffic_gen_0_0\design_1_axi_traffic_gen_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_traffic_gen_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi_traffic_gen_1_0\design_1_axi_traffic_gen_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_traffic_gen_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_rgb_rainbow_0_1\design_1_rgb_rainbow_0_1.xci" Type="IP">
+        <Instance HierarchyPath="rgb_rainbow_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi_smc_0\design_1_axi_smc_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_smc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_rst_clk_125M_0\design_1_rst_clk_125M_0.xci" Type="IP">
+        <Instance HierarchyPath="rst_clk_125M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi_smc_1_0\design_1_axi_smc_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_smc_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_vio_0_0\design_1_vio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="vio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
