@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct  2 14:30:10 2025" VIVADOVERSION="2020.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="settings_0" PORT="clk"/>
+        <CONNECTION INSTANCE="clk_manager_0" PORT="clk"/>
+        <CONNECTION INSTANCE="state_machine_0" PORT="clk"/>
+        <CONNECTION INSTANCE="apuesta_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ruleta_0" PORT="clk"/>
+        <CONNECTION INSTANCE="debouncer_2" PORT="clk"/>
+        <CONNECTION INSTANCE="debouncer_1" PORT="clk"/>
+        <CONNECTION INSTANCE="debouncer_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_1" SIGIS="undef" SIGNAME="External_Ports_btn_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_2" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_2" SIGIS="undef" SIGNAME="External_Ports_btn_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_1" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_0" SIGIS="undef" SIGNAME="External_Ports_btn_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_0" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_3" SIGIS="undef" SIGNAME="External_Ports_btn_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_manager_0" PORT="btn_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="led_controller_0_leds">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="led_controller_0" PORT="leds"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="apuesta_0" PORT="sw"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="2" FULLNAME="/apuesta_0" HWVERSION="1.0" INSTANCE="apuesta_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="apuesta" VLNV="xilinx.com:user:apuesta:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_apuesta_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="guess" RIGHT="0" SIGIS="undef" SIGNAME="apuesta_0_guess">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="led_controller_0" PORT="guess"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/clk_manager_0" HWVERSION="1.0" INSTANCE="clk_manager_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_manager" VLNV="xilinx.com:user:clk_manager:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CLK_FREQ_HZ" VALUE="125000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_clk_manager_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_3" SIGIS="undef" SIGNAME="External_Ports_btn_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="special_clk_out" SIGIS="undef" SIGNAME="clk_manager_0_special_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ruleta_0" PORT="special_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="stop" SIGIS="undef" SIGNAME="clk_manager_0_stop">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="stop"/>
+            <CONNECTION INSTANCE="ruleta_0" PORT="stop"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="difficulty" RIGHT="0" SIGIS="undef" SIGNAME="settings_0_difficulty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="settings_0" PORT="difficulty"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/debouncer_0" HWVERSION="1.0" INSTANCE="debouncer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:user:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBOUNCE_TIME_MS" VALUE="20"/>
+        <PARAMETER NAME="CLK_FREQ_HZ" VALUE="125000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debouncer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_btn_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debounced_pulse" SIGIS="undef" SIGNAME="debouncer_0_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="btn_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/debouncer_1" HWVERSION="1.0" INSTANCE="debouncer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:user:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBOUNCE_TIME_MS" VALUE="20"/>
+        <PARAMETER NAME="CLK_FREQ_HZ" VALUE="125000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debouncer_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_btn_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debounced_pulse" SIGIS="undef" SIGNAME="debouncer_1_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="settings_0" PORT="btn_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/debouncer_2" HWVERSION="1.0" INSTANCE="debouncer_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:user:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBOUNCE_TIME_MS" VALUE="20"/>
+        <PARAMETER NAME="CLK_FREQ_HZ" VALUE="125000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debouncer_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_btn_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debounced_pulse" SIGIS="undef" SIGNAME="debouncer_2_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="settings_0" PORT="btn_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/led_controller_0" HWVERSION="1.0" INSTANCE="led_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="led_controller" VLNV="xilinx.com:user:led_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_led_controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="ruleta_out" RIGHT="0" SIGIS="undef" SIGNAME="ruleta_0_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ruleta_0" PORT="result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="settings_out" RIGHT="0" SIGIS="undef" SIGNAME="settings_0_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="settings_0" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="guess" RIGHT="0" SIGIS="undef" SIGNAME="apuesta_0_guess">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="apuesta_0" PORT="guess"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="led_controller_0_leds">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="leds"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/ruleta_0" HWVERSION="1.0" INSTANCE="ruleta_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ruleta" VLNV="xilinx.com:user:ruleta:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ruleta_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="special_clk_out" SIGIS="undef" SIGNAME="clk_manager_0_special_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_manager_0" PORT="special_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stop" SIGIS="undef" SIGNAME="clk_manager_0_stop">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_manager_0" PORT="stop"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="difficulty" RIGHT="0" SIGIS="undef" SIGNAME="settings_0_difficulty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="settings_0" PORT="difficulty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="result" RIGHT="0" SIGIS="undef" SIGNAME="ruleta_0_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="led_controller_0" PORT="ruleta_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/settings_0" HWVERSION="1.0" INSTANCE="settings_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="settings" VLNV="xilinx.com:user:settings:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_settings_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="state_machine_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_1" SIGIS="undef" SIGNAME="debouncer_2_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_2" PORT="debounced_pulse"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_2" SIGIS="undef" SIGNAME="debouncer_1_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_1" PORT="debounced_pulse"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="difficulty" RIGHT="0" SIGIS="undef" SIGNAME="settings_0_difficulty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ruleta_0" PORT="difficulty"/>
+            <CONNECTION INSTANCE="clk_manager_0" PORT="difficulty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="settings_0_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="led_controller_0" PORT="settings_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/state_machine_0" HWVERSION="1.0" INSTANCE="state_machine_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="state_machine" VLNV="xilinx.com:user:state_machine:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_state_machine_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stop" SIGIS="undef" SIGNAME="clk_manager_0_stop">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_manager_0" PORT="stop"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="state_machine_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_manager_0" PORT="state"/>
+            <CONNECTION INSTANCE="settings_0" PORT="state"/>
+            <CONNECTION INSTANCE="apuesta_0" PORT="state"/>
+            <CONNECTION INSTANCE="led_controller_0" PORT="state"/>
+            <CONNECTION INSTANCE="ruleta_0" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_0" SIGIS="undef" SIGNAME="debouncer_0_debounced_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_0" PORT="debounced_pulse"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

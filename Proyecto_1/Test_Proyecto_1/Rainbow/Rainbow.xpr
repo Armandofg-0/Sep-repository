@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/Users/Karlsen/Desktop/SEP/Rainbow/Rainbow.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/Karlsen/Sep-repository/Proyecto_1/Test_Proyecto_1/Rainbow/Rainbow.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="34515f91a3874257966f2dfd42cf8c5b"/>
@@ -29,9 +29,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/rgb_rainbow_compact_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/rgb_rainbow_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/Rainbow_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../Desktop/SEP/ip_repo/rgb_rainbow_compact_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../Desktop/SEP/ip_repo/rgb_rainbow_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../Desktop/SEP/ip_repo/Rainbow_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PSRCDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -77,17 +77,41 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rgb_rainbow_compact_0_0/design_1_rgb_rainbow_compact_0_0.xci">
-          <Proxy FileSetName="design_1_rgb_rainbow_compact_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_2/design_1_clk_wiz_2.xci">
+          <Proxy FileSetName="design_1_clk_wiz_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_traffic_gen_1_1/design_1_axi_traffic_gen_1_1.xci">
           <Proxy FileSetName="design_1_axi_traffic_gen_1_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_2/design_1_clk_wiz_2.xci">
-          <Proxy FileSetName="design_1_clk_wiz_2"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rgb_rainbow_compact_0_0/design_1_rgb_rainbow_compact_0_0.xci">
+          <Proxy FileSetName="design_1_rgb_rainbow_compact_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../Downloads/coefiles2/data.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../Downloads/coefiles2/addr.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../Downloads/coefiles2/mask.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../Downloads/coefiles2/ctrl.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -117,6 +141,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../IP Core/component.xml">
+        <FileInfo SFType="IPXACT"/>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -127,7 +154,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Zybo-Z7-Master.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/Zybo-Z7-Master.xdc"/>
           <Attr Name="ImportTime" Val="1755049257"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -230,9 +257,7 @@
     </Run>
     <Run Id="design_1_rgb_rainbow_compact_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_rgb_rainbow_compact_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_rgb_rainbow_compact_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_rgb_rainbow_compact_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -294,9 +319,7 @@
     </Run>
     <Run Id="design_1_rgb_rainbow_compact_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_rgb_rainbow_compact_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_rgb_rainbow_compact_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

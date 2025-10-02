@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>Debouncing_Button_VHDL</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>Debouncing_Button_VHDL</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>763bfd42</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>Debouncing_Button_VHDL</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>763bfd42</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>ea1875ee</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>button</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>debounced_pulse</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>DEBOUNCE_TIME_MS</spirit:name>
+        <spirit:displayName>Debounce Time Ms</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEBOUNCE_TIME_MS">20</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CLK_FREQ_HZ</spirit:name>
+        <spirit:displayName>Clk Freq Hz</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLK_FREQ_HZ">125000000</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/Debouncing_Button_VHDL.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_763bfd42</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/Debouncing_Button_VHDL.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/Debouncing_Button_VHDL_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_ea1875ee</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Debouncing_Button_VHDL_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>DEBOUNCE_TIME_MS</spirit:name>
+      <spirit:displayName>Debounce Time Ms</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEBOUNCE_TIME_MS">20</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Debouncing_Button_VHDL_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CLK_FREQ_HZ</spirit:name>
+      <spirit:displayName>Clk Freq Hz</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_FREQ_HZ">125000000</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>Debouncing_Button_VHDL_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-02T17:18:31Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dd04fc7_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3edd33a7_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cf8c42_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2806f19e_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61718946_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bc8ad5_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ab4c2_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77771fb1_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69845c33_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e07b3b2_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2361fcec_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722982e5_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9a8441_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@116fd8be_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fbb5759_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5432b8e2_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f8a7f30_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@635990eb_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3960c019_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6109eecc_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c7ece0d_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40adbcad_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64d0e4d9_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c67815_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e09bb2d_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c0a60be_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c3475d_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e6c5876_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e01b1ba_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e3dfd89_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c3283f0_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@572368a8_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160ef2af_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66b97055_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4abc76ff_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77eb6253_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e913546_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52a82760_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f97ee5_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eac0566_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@280c2b_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ed4415_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ae2e67_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15141a6f_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@246eafb3_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@355fdbd_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@474eea64_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cdf07cc_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d2f3fa9_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c8321d5_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@760d7ad0_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6f323d_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29ac6196_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35fc079f_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4935410e_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b98cde_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2279c75e_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44633eab_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b8d7d75_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f054820_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad99124_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef58bef_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e38c0ff_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11af58f1_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22dc978_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35376751_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4469bac_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f20325_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e9d722c_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a8c3221_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e637d91_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46e27d21_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/Debouncing_button_VHDL</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a88d4390"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bdd6fb8b"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="1b4d0b33"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e4b4a97a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7a0f2468"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

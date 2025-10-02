@@ -1,0 +1,345 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct  2 14:30:16 2025
+# Process ID: 12732
+# Current directory: C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.cache/ip 
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16856
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1062.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:30]
+INFO: [Synth 8-3491] module 'design_1_apuesta_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_apuesta_0_0/synth/design_1_apuesta_0_0.vhd:56' bound to instance 'apuesta_0' of component 'design_1_apuesta_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'design_1_apuesta_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_apuesta_0_0/synth/design_1_apuesta_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'apuesta' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/bff5/src/apuesta.vhd:5' bound to instance 'U0' of component 'apuesta' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_apuesta_0_0/synth/design_1_apuesta_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'apuesta' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/bff5/src/apuesta.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'apuesta' (1#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/bff5/src/apuesta.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_apuesta_0_0' (2#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_apuesta_0_0/synth/design_1_apuesta_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'design_1_clk_manager_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_clk_manager_0_0/synth/design_1_clk_manager_0_0.vhd:56' bound to instance 'clk_manager_0' of component 'design_1_clk_manager_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_manager_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_clk_manager_0_0/synth/design_1_clk_manager_0_0.vhd:67]
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'clk_manager' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/8cef/src/clk_manager.vhd:5' bound to instance 'U0' of component 'clk_manager' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_clk_manager_0_0/synth/design_1_clk_manager_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'clk_manager' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/8cef/src/clk_manager.vhd:19]
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_manager' (3#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/8cef/src/clk_manager.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'design_1_clk_manager_0_0' (4#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_clk_manager_0_0/synth/design_1_clk_manager_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'design_1_debouncer_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.vhd:56' bound to instance 'debouncer_0' of component 'design_1_debouncer_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'design_1_debouncer_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.vhd:64]
+	Parameter DEBOUNCE_TIME_MS bound to: 20 - type: integer 
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/84ec/src/debouncer.vhd:6' bound to instance 'U0' of component 'debouncer' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/84ec/src/debouncer.vhd:19]
+	Parameter DEBOUNCE_TIME_MS bound to: 20 - type: integer 
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (5#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/84ec/src/debouncer.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'design_1_debouncer_0_0' (6#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'design_1_debouncer_1_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_1_0/synth/design_1_debouncer_1_0.vhd:56' bound to instance 'debouncer_1' of component 'design_1_debouncer_1_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'design_1_debouncer_1_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_1_0/synth/design_1_debouncer_1_0.vhd:64]
+	Parameter DEBOUNCE_TIME_MS bound to: 20 - type: integer 
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/84ec/src/debouncer.vhd:6' bound to instance 'U0' of component 'debouncer' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_1_0/synth/design_1_debouncer_1_0.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'design_1_debouncer_1_0' (7#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_1_0/synth/design_1_debouncer_1_0.vhd:64]
+INFO: [Synth 8-3491] module 'design_1_debouncer_2_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_2_0/synth/design_1_debouncer_2_0.vhd:56' bound to instance 'debouncer_2' of component 'design_1_debouncer_2_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'design_1_debouncer_2_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_2_0/synth/design_1_debouncer_2_0.vhd:64]
+	Parameter DEBOUNCE_TIME_MS bound to: 20 - type: integer 
+	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/84ec/src/debouncer.vhd:6' bound to instance 'U0' of component 'debouncer' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_2_0/synth/design_1_debouncer_2_0.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'design_1_debouncer_2_0' (8#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_debouncer_2_0/synth/design_1_debouncer_2_0.vhd:64]
+INFO: [Synth 8-3491] module 'design_1_led_controller_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_led_controller_0_0/synth/design_1_led_controller_0_0.vhd:56' bound to instance 'led_controller_0' of component 'design_1_led_controller_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'design_1_led_controller_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_led_controller_0_0/synth/design_1_led_controller_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'led_controller' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/942e/src/led_controller.vhd:5' bound to instance 'U0' of component 'led_controller' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_led_controller_0_0/synth/design_1_led_controller_0_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'led_controller' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/942e/src/led_controller.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'led_controller' (9#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/942e/src/led_controller.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'design_1_led_controller_0_0' (10#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_led_controller_0_0/synth/design_1_led_controller_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'design_1_ruleta_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ruleta_0_0/synth/design_1_ruleta_0_0.vhd:56' bound to instance 'ruleta_0' of component 'design_1_ruleta_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'design_1_ruleta_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ruleta_0_0/synth/design_1_ruleta_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'ruleta' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/45fd/src/ruleta.vhd:5' bound to instance 'U0' of component 'ruleta' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ruleta_0_0/synth/design_1_ruleta_0_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'ruleta' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/45fd/src/ruleta.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ruleta' (11#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/45fd/src/ruleta.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ruleta_0_0' (12#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ruleta_0_0/synth/design_1_ruleta_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'design_1_settings_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_settings_0_0/synth/design_1_settings_0_0.vhd:56' bound to instance 'settings_0' of component 'design_1_settings_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'design_1_settings_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_settings_0_0/synth/design_1_settings_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'settings' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/2402/src/settings_menu.vhd:4' bound to instance 'U0' of component 'settings' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_settings_0_0/synth/design_1_settings_0_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'settings' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/2402/src/settings_menu.vhd:14]
+WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/2402/src/settings_menu.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'settings' (13#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/2402/src/settings_menu.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_settings_0_0' (14#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_settings_0_0/synth/design_1_settings_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'design_1_state_machine_0_0' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_state_machine_0_0/synth/design_1_state_machine_0_0.vhd:56' bound to instance 'state_machine_0' of component 'design_1_state_machine_0_0' [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'design_1_state_machine_0_0' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_state_machine_0_0/synth/design_1_state_machine_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'state_machine' declared at 'c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/07c1/src/state_machine.vhd:5' bound to instance 'U0' of component 'state_machine' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_state_machine_0_0/synth/design_1_state_machine_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'state_machine' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/07c1/src/state_machine.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'state_machine' (15#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/07c1/src/state_machine.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_state_machine_0_0' (16#1) [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_state_machine_0_0/synth/design_1_state_machine_0_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (17#1) [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/synth/design_1.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (18#1) [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1062.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1062.012 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1148.609 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1148.609 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/led_controller_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/state_machine_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_manager_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/apuesta_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/settings_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ruleta_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/debouncer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/debouncer_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/debouncer_2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'level_reg' in module 'settings'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'state_machine'
+WARNING: [Synth 8-327] inferring latch for variable 'leds_reg' [c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ipshared/942e/src/led_controller.vhd:18]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00001 |                             1000
+                 iSTATE0 |                            00010 |                             1100
+                 iSTATE1 |                            00100 |                             1110
+                 iSTATE3 |                            01000 |                             1111
+                 iSTATE2 |                            10000 |                             0000
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'level_reg' using encoding 'one-hot' in module 'settings'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                 apuesta |                               01 |                               01
+                  ruleta |                               10 |                               10
+               resultado |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'state_machine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   22 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               22 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   4 Input   24 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 3     
+	   2 Input   21 Bit        Muxes := 1     
+	   4 Input   21 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1148.609 ; gain = 86.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1149.395 ; gain = 87.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    49|
+|3     |LUT1   |     6|
+|4     |LUT2   |   182|
+|5     |LUT3   |    11|
+|6     |LUT4   |    23|
+|7     |LUT5   |    24|
+|8     |LUT6   |    78|
+|9     |FDRE   |   172|
+|10    |FDSE   |    14|
+|11    |IBUF   |     9|
+|12    |OBUF   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1154.137 ; gain = 5.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1154.137 ; gain = 92.125
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1166.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1166.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+77 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1166.219 ; gain = 104.207
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  2 14:31:15 2025...

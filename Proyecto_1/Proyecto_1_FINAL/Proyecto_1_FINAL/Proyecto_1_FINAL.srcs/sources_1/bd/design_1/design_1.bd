@@ -1,0 +1,228 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE7113D0A7B85FA34",
+      "device": "xc7z010clg400-1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "led_controller_0": "",
+      "state_machine_0": "",
+      "clk_manager_0": "",
+      "apuesta_0": "",
+      "settings_0": "",
+      "ruleta_0": "",
+      "debouncer_0": "",
+      "debouncer_1": "",
+      "debouncer_2": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "btn_1": {
+        "direction": "I"
+      },
+      "btn_2": {
+        "direction": "I"
+      },
+      "btn_0": {
+        "direction": "I"
+      },
+      "btn_3": {
+        "direction": "I"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "sw": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "led_controller_0": {
+        "vlnv": "xilinx.com:user:led_controller:1.0",
+        "xci_name": "design_1_led_controller_0_0"
+      },
+      "state_machine_0": {
+        "vlnv": "xilinx.com:user:state_machine:1.0",
+        "xci_name": "design_1_state_machine_0_0"
+      },
+      "clk_manager_0": {
+        "vlnv": "xilinx.com:user:clk_manager:1.0",
+        "xci_name": "design_1_clk_manager_0_0"
+      },
+      "apuesta_0": {
+        "vlnv": "xilinx.com:user:apuesta:1.0",
+        "xci_name": "design_1_apuesta_0_0"
+      },
+      "settings_0": {
+        "vlnv": "xilinx.com:user:settings:1.0",
+        "xci_name": "design_1_settings_0_0"
+      },
+      "ruleta_0": {
+        "vlnv": "xilinx.com:user:ruleta:1.0",
+        "xci_name": "design_1_ruleta_0_0"
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:user:debouncer:1.0",
+        "xci_name": "design_1_debouncer_0_0"
+      },
+      "debouncer_1": {
+        "vlnv": "xilinx.com:user:debouncer:1.0",
+        "xci_name": "design_1_debouncer_1_0"
+      },
+      "debouncer_2": {
+        "vlnv": "xilinx.com:user:debouncer:1.0",
+        "xci_name": "design_1_debouncer_2_0"
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "settings_0/clk",
+          "clk_manager_0/clk",
+          "state_machine_0/clk",
+          "apuesta_0/clk",
+          "ruleta_0/clk",
+          "debouncer_2/clk",
+          "debouncer_1/clk",
+          "debouncer_0/clk"
+        ]
+      },
+      "btn_3_0_1": {
+        "ports": [
+          "btn_3",
+          "clk_manager_0/btn_3"
+        ]
+      },
+      "state_machine_0_state": {
+        "ports": [
+          "state_machine_0/state",
+          "clk_manager_0/state",
+          "settings_0/state",
+          "apuesta_0/state",
+          "led_controller_0/state",
+          "ruleta_0/state"
+        ]
+      },
+      "led_controller_0_leds": {
+        "ports": [
+          "led_controller_0/leds",
+          "leds"
+        ]
+      },
+      "settings_0_led": {
+        "ports": [
+          "settings_0/led",
+          "led_controller_0/settings_out"
+        ]
+      },
+      "apuesta_0_guess": {
+        "ports": [
+          "apuesta_0/guess",
+          "led_controller_0/guess"
+        ]
+      },
+      "clk_manager_0_stop": {
+        "ports": [
+          "clk_manager_0/stop",
+          "state_machine_0/stop",
+          "ruleta_0/stop"
+        ]
+      },
+      "clk_manager_0_special_clk_out": {
+        "ports": [
+          "clk_manager_0/special_clk_out",
+          "ruleta_0/special_clk_out"
+        ]
+      },
+      "ruleta_0_result": {
+        "ports": [
+          "ruleta_0/result",
+          "led_controller_0/ruleta_out"
+        ]
+      },
+      "settings_0_difficulty": {
+        "ports": [
+          "settings_0/difficulty",
+          "ruleta_0/difficulty",
+          "clk_manager_0/difficulty"
+        ]
+      },
+      "sw_0_1": {
+        "ports": [
+          "sw",
+          "apuesta_0/sw"
+        ]
+      },
+      "btn_1_1": {
+        "ports": [
+          "btn_1",
+          "debouncer_2/button"
+        ]
+      },
+      "btn_2_1": {
+        "ports": [
+          "btn_2",
+          "debouncer_1/button"
+        ]
+      },
+      "btn_0_1": {
+        "ports": [
+          "btn_0",
+          "debouncer_0/button"
+        ]
+      },
+      "debouncer_0_debounced_pulse": {
+        "ports": [
+          "debouncer_0/debounced_pulse",
+          "state_machine_0/btn_0"
+        ]
+      },
+      "debouncer_1_debounced_pulse": {
+        "ports": [
+          "debouncer_1/debounced_pulse",
+          "settings_0/btn_2"
+        ]
+      },
+      "debouncer_2_debounced_pulse": {
+        "ports": [
+          "debouncer_2/debounced_pulse",
+          "settings_0/btn_1"
+        ]
+      }
+    }
+  }
+}
