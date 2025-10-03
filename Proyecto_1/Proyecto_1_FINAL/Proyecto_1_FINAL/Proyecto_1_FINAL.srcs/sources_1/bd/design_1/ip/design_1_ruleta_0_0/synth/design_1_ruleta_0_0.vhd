@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:ruleta:1.0
--- IP Revision: 2
+-- IP Revision: 7
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -68,6 +68,9 @@ ARCHITECTURE design_1_ruleta_0_0_arch OF design_1_ruleta_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_ruleta_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT ruleta IS
+    GENERIC (
+      INIT_CYCLES : INTEGER
+    );
     PORT (
       clk : IN STD_LOGIC;
       state : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -82,15 +85,18 @@ ARCHITECTURE design_1_ruleta_0_0_arch OF design_1_ruleta_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_ruleta_0_0_arch : ARCHITECTURE IS "design_1_ruleta_0_0,ruleta,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_ruleta_0_0_arch: ARCHITECTURE IS "design_1_ruleta_0_0,ruleta,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ruleta,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_ruleta_0_0_arch: ARCHITECTURE IS "design_1_ruleta_0_0,ruleta,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ruleta,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,INIT_CYCLES=4}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_ruleta_0_0_arch: ARCHITECTURE IS "package_project";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_clk, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : ruleta
+    GENERIC MAP (
+      INIT_CYCLES => 4
+    )
     PORT MAP (
       clk => clk,
       state => state,

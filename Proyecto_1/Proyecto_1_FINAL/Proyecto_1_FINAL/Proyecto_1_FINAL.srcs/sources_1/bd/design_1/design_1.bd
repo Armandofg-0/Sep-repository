@@ -15,7 +15,6 @@
       "clk_manager_0": "",
       "apuesta_0": "",
       "settings_0": "",
-      "ruleta_0": "",
       "debouncer_0": "",
       "debouncer_1": "",
       "debouncer_2": "",
@@ -25,7 +24,9 @@
       "rst_clk_125M": "",
       "axi_smc_1": "",
       "rgb_rainbow_0": "",
-      "vio_0": ""
+      "vio_0": "",
+      "ila_0": "",
+      "ruleta_0": ""
     },
     "ports": {
       "clk": {
@@ -105,10 +106,6 @@
       "settings_0": {
         "vlnv": "xilinx.com:user:settings:1.0",
         "xci_name": "design_1_settings_0_0"
-      },
-      "ruleta_0": {
-        "vlnv": "xilinx.com:user:ruleta:1.0",
-        "xci_name": "design_1_ruleta_0_0"
       },
       "debouncer_0": {
         "vlnv": "xilinx.com:user:debouncer:1.0",
@@ -344,6 +341,37 @@
             "value": "0"
           }
         }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "2"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "ruleta_0": {
+        "vlnv": "xilinx.com:user:ruleta:1.0",
+        "xci_name": "design_1_ruleta_0_0"
       }
     },
     "interface_nets": {
@@ -380,7 +408,6 @@
           "clk_manager_0/clk",
           "state_machine_0/clk",
           "apuesta_0/clk",
-          "ruleta_0/clk",
           "debouncer_2/clk",
           "debouncer_1/clk",
           "debouncer_0/clk",
@@ -391,7 +418,9 @@
           "axi_traffic_gen_1/s_axi_aclk",
           "axi_smc/aclk",
           "axi_smc_1/aclk",
-          "rst_clk_125M/slowest_sync_clk"
+          "rst_clk_125M/slowest_sync_clk",
+          "ila_0/clk",
+          "ruleta_0/clk"
         ]
       },
       "btn_3_0_1": {
@@ -407,13 +436,15 @@
           "settings_0/state",
           "apuesta_0/state",
           "led_controller_0/state",
+          "ila_0/probe0",
           "ruleta_0/state"
         ]
       },
       "led_controller_0_leds": {
         "ports": [
           "led_controller_0/leds",
-          "leds"
+          "leds",
+          "ila_0/probe1"
         ]
       },
       "settings_0_led": {
@@ -425,7 +456,8 @@
       "apuesta_0_guess": {
         "ports": [
           "apuesta_0/guess",
-          "led_controller_0/guess"
+          "led_controller_0/guess",
+          "ila_0/probe2"
         ]
       },
       "clk_manager_0_stop": {
@@ -444,14 +476,15 @@
       "ruleta_0_result": {
         "ports": [
           "ruleta_0/result",
-          "led_controller_0/ruleta_out"
+          "led_controller_0/ruleta_out",
+          "ila_0/probe3"
         ]
       },
       "settings_0_difficulty": {
         "ports": [
           "settings_0/difficulty",
-          "ruleta_0/difficulty",
-          "clk_manager_0/difficulty"
+          "clk_manager_0/difficulty",
+          "ruleta_0/difficulty"
         ]
       },
       "sw_0_1": {

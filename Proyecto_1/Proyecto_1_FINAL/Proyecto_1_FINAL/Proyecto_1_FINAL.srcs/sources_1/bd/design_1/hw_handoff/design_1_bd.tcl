@@ -212,6 +212,18 @@ proc create_root_design { parentCell } {
   # Create instance: debouncer_2, and set properties
   set debouncer_2 [ create_bd_cell -type ip -vlnv xilinx.com:user:debouncer:1.0 debouncer_2 ]
 
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_PROBE0_WIDTH {2} \
+   CONFIG.C_PROBE1_WIDTH {4} \
+   CONFIG.C_PROBE2_WIDTH {4} \
+   CONFIG.C_PROBE3_WIDTH {4} \
+ ] $ila_0
+
   # Create instance: led_controller_0, and set properties
   set led_controller_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:led_controller:1.0 led_controller_0 ]
 
@@ -223,6 +235,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: ruleta_0, and set properties
   set ruleta_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ruleta:1.0 ruleta_0 ]
+  set_property -dict [ list \
+   CONFIG.clk {} \
+ ] $ruleta_0
 
   # Create instance: settings_0, and set properties
   set settings_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:settings:1.0 settings_0 ]
@@ -244,26 +259,26 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_traffic_gen_1_M_AXI [get_bd_intf_pins axi_smc_1/S00_AXI] [get_bd_intf_pins axi_traffic_gen_1/M_AXI]
 
   # Create port connections
-  connect_bd_net -net apuesta_0_guess [get_bd_pins apuesta_0/guess] [get_bd_pins led_controller_0/guess]
+  connect_bd_net -net apuesta_0_guess [get_bd_pins apuesta_0/guess] [get_bd_pins ila_0/probe2] [get_bd_pins led_controller_0/guess]
   connect_bd_net -net btn_0_1 [get_bd_ports btn_0] [get_bd_pins debouncer_0/button]
   connect_bd_net -net btn_1_1 [get_bd_ports btn_1] [get_bd_pins debouncer_2/button]
   connect_bd_net -net btn_2_1 [get_bd_ports btn_2] [get_bd_pins debouncer_1/button]
   connect_bd_net -net btn_3_0_1 [get_bd_ports btn_3] [get_bd_pins clk_manager_0/btn_3]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins apuesta_0/clk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins clk_manager_0/clk] [get_bd_pins debouncer_0/clk] [get_bd_pins debouncer_1/clk] [get_bd_pins debouncer_2/clk] [get_bd_pins rgb_rainbow_0/clk] [get_bd_pins rgb_rainbow_0/s00_axi_aclk] [get_bd_pins rst_clk_125M/slowest_sync_clk] [get_bd_pins ruleta_0/clk] [get_bd_pins settings_0/clk] [get_bd_pins state_machine_0/clk] [get_bd_pins vio_0/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins apuesta_0/clk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins clk_manager_0/clk] [get_bd_pins debouncer_0/clk] [get_bd_pins debouncer_1/clk] [get_bd_pins debouncer_2/clk] [get_bd_pins ila_0/clk] [get_bd_pins rgb_rainbow_0/clk] [get_bd_pins rgb_rainbow_0/s00_axi_aclk] [get_bd_pins rst_clk_125M/slowest_sync_clk] [get_bd_pins ruleta_0/clk] [get_bd_pins settings_0/clk] [get_bd_pins state_machine_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net clk_manager_0_special_clk_out [get_bd_pins clk_manager_0/special_clk_out] [get_bd_pins ruleta_0/special_clk_out]
   connect_bd_net -net clk_manager_0_stop [get_bd_pins clk_manager_0/stop] [get_bd_pins ruleta_0/stop] [get_bd_pins state_machine_0/stop]
   connect_bd_net -net debouncer_0_debounced_pulse [get_bd_pins debouncer_0/debounced_pulse] [get_bd_pins state_machine_0/btn_0]
   connect_bd_net -net debouncer_1_debounced_pulse [get_bd_pins debouncer_1/debounced_pulse] [get_bd_pins settings_0/btn_2]
   connect_bd_net -net debouncer_2_debounced_pulse [get_bd_pins debouncer_2/debounced_pulse] [get_bd_pins settings_0/btn_1]
-  connect_bd_net -net led_controller_0_leds [get_bd_ports leds] [get_bd_pins led_controller_0/leds]
+  connect_bd_net -net led_controller_0_leds [get_bd_ports leds] [get_bd_pins ila_0/probe1] [get_bd_pins led_controller_0/leds]
   connect_bd_net -net rgb_rainbow_0_rgb_B [get_bd_ports rgb_B] [get_bd_pins rgb_rainbow_0/rgb_B]
   connect_bd_net -net rgb_rainbow_0_rgb_G [get_bd_ports rgb_G] [get_bd_pins rgb_rainbow_0/rgb_G]
   connect_bd_net -net rgb_rainbow_0_rgb_R [get_bd_ports rgb_R] [get_bd_pins rgb_rainbow_0/rgb_R]
   connect_bd_net -net rst_clk_125M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins rgb_rainbow_0/s00_axi_aresetn] [get_bd_pins rst_clk_125M/peripheral_aresetn]
-  connect_bd_net -net ruleta_0_result [get_bd_pins led_controller_0/ruleta_out] [get_bd_pins ruleta_0/result]
+  connect_bd_net -net ruleta_0_result [get_bd_pins ila_0/probe3] [get_bd_pins led_controller_0/ruleta_out] [get_bd_pins ruleta_0/result]
   connect_bd_net -net settings_0_difficulty [get_bd_pins clk_manager_0/difficulty] [get_bd_pins ruleta_0/difficulty] [get_bd_pins settings_0/difficulty]
   connect_bd_net -net settings_0_led [get_bd_pins led_controller_0/settings_out] [get_bd_pins settings_0/led]
-  connect_bd_net -net state_machine_0_state [get_bd_pins apuesta_0/state] [get_bd_pins clk_manager_0/state] [get_bd_pins led_controller_0/state] [get_bd_pins ruleta_0/state] [get_bd_pins settings_0/state] [get_bd_pins state_machine_0/state]
+  connect_bd_net -net state_machine_0_state [get_bd_pins apuesta_0/state] [get_bd_pins clk_manager_0/state] [get_bd_pins ila_0/probe0] [get_bd_pins led_controller_0/state] [get_bd_pins ruleta_0/state] [get_bd_pins settings_0/state] [get_bd_pins state_machine_0/state]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins apuesta_0/sw]
   connect_bd_net -net vio_0_probe_out0 [get_bd_pins rst_clk_125M/ext_reset_in] [get_bd_pins vio_0/probe_out0]
 

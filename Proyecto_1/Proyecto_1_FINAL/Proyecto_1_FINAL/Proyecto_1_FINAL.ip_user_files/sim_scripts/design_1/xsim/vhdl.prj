@@ -1,0 +1,32 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ipshared/942e/src/led_controller.vhd" \
+"../../../bd/design_1/ip/design_1_led_controller_0_0/sim/design_1_led_controller_0_0.vhd" \
+"../../../bd/design_1/ipshared/07c1/src/state_machine.vhd" \
+"../../../bd/design_1/ip/design_1_state_machine_0_0/sim/design_1_state_machine_0_0.vhd" \
+"../../../bd/design_1/ipshared/8cef/src/clk_manager.vhd" \
+"../../../bd/design_1/ip/design_1_clk_manager_0_0/sim/design_1_clk_manager_0_0.vhd" \
+"../../../bd/design_1/ipshared/bff5/src/apuesta.vhd" \
+"../../../bd/design_1/ip/design_1_apuesta_0_0/sim/design_1_apuesta_0_0.vhd" \
+"../../../bd/design_1/ipshared/2402/src/settings_menu.vhd" \
+"../../../bd/design_1/ip/design_1_settings_0_0/sim/design_1_settings_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_ruleta_0_0/src/c_shift_ram_0/sim/c_shift_ram_0.vhd" \
+"../../../bd/design_1/ipshared/4ec8/src/ruleta.vhd" \
+"../../../bd/design_1/Modules/rotacion_dificl.vhd" \
+"../../../bd/design_1/Modules/rotacion_facil.vhd" \
+"../../../bd/design_1/Modules/rotacion_medio.vhd" \
+"../../../bd/design_1/ip/design_1_ruleta_0_0/sim/design_1_ruleta_0_0.vhd" \
+"../../../bd/design_1/ipshared/84ec/src/debouncer.vhd" \
+"../../../bd/design_1/ip/design_1_debouncer_0_0/sim/design_1_debouncer_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_debouncer_1_0/sim/design_1_debouncer_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_debouncer_2_0/sim/design_1_debouncer_2_0.vhd" \
+"../../../bd/design_1/ipshared/b7e5/hdl/rgb_rainbow_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/b7e5/hdl/rgb_rainbow_v1_0.vhd" \
+"../../../bd/design_1/ip/design_1_rgb_rainbow_0_1/sim/design_1_rgb_rainbow_0_1.vhd" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/sim/bd_afc3_psr_aclk_0.vhd" \
+"../../../bd/design_1/ip/design_1_rst_clk_125M_0/sim/design_1_rst_clk_125M_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/sim/bd_a878_psr_aclk_0.vhd" \
+"../../../bd/design_1/ip/design_1_vio_0_0/sim/design_1_vio_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
+"../../../bd/design_1/sim/design_1.vhd" \
+
+nosort

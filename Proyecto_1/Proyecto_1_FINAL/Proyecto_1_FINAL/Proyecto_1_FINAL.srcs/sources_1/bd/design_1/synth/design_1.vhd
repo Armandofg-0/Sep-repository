@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Oct  2 17:19:46 2025
---Host        : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
+--Date        : Thu Oct  2 23:10:01 2025
+--Host        : Armando running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -25,7 +25,7 @@ entity design_1 is
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=6,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=6,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -76,16 +76,6 @@ architecture STRUCTURE of design_1 is
     led : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_settings_0_0;
-  component design_1_ruleta_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    special_clk_out : in STD_LOGIC;
-    stop : in STD_LOGIC;
-    difficulty : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    result : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_1_ruleta_0_0;
   component design_1_debouncer_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -419,6 +409,25 @@ architecture STRUCTURE of design_1 is
     probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_vio_0_0;
+  component design_1_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_ila_0_0;
+  component design_1_ruleta_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    special_clk_out : in STD_LOGIC;
+    stop : in STD_LOGIC;
+    difficulty : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    result : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_ruleta_0_0;
   signal apuesta_0_guess : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -863,6 +872,14 @@ debouncer_2: component design_1_debouncer_2_0
       button => btn_1_1,
       clk => clk_0_1,
       debounced_pulse => debouncer_2_debounced_pulse
+    );
+ila_0: component design_1_ila_0_0
+     port map (
+      clk => clk_0_1,
+      probe0(1 downto 0) => state_machine_0_state(1 downto 0),
+      probe1(3 downto 0) => led_controller_0_leds(3 downto 0),
+      probe2(3 downto 0) => apuesta_0_guess(3 downto 0),
+      probe3(3 downto 0) => ruleta_0_result(3 downto 0)
     );
 led_controller_0: component design_1_led_controller_0_0
      port map (

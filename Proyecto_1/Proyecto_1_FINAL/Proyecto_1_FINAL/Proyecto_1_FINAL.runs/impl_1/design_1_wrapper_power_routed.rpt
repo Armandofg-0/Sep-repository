@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu Oct  2 17:38:40 2025
-| Host             : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
+| Date             : Thu Oct  2 23:43:05 2025
+| Host             : Armando running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z010clg400-1
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.016 |    22513 |       --- |             --- |
-|   LUT as Logic           |     0.013 |     8576 |     17600 |           48.73 |
+| Slice Logic              |     0.016 |    24834 |       --- |             --- |
+|   LUT as Logic           |     0.013 |     9219 |     17600 |           52.38 |
 |   LUT as Distributed RAM |    <0.001 |      913 |      6000 |           15.22 |
-|   Register               |    <0.001 |     9099 |     35200 |           25.85 |
-|   CARRY4                 |    <0.001 |      548 |      4400 |           12.45 |
-|   F7/F8 Muxes            |    <0.001 |      385 |     17600 |            2.19 |
-|   LUT as Shift Register  |    <0.001 |      141 |      6000 |            2.35 |
+|   Register               |    <0.001 |    10349 |     35200 |           29.40 |
+|   CARRY4                 |    <0.001 |      571 |      4400 |           12.98 |
+|   F7/F8 Muxes            |    <0.001 |      399 |     17600 |            2.27 |
+|   LUT as Shift Register  |    <0.001 |      229 |      6000 |            3.82 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |      418 |       --- |             --- |
-| Signals                  |     0.017 |    16501 |       --- |             --- |
-| Block RAM                |    <0.001 |        9 |        60 |           15.00 |
+|   Others                 |     0.000 |      560 |       --- |             --- |
+| Signals                  |     0.017 |    18262 |       --- |             --- |
+| Block RAM                |    <0.001 |      9.5 |        60 |           15.83 |
 | I/O                      |     0.004 |       15 |       100 |           15.00 |
 | Static Power             |     0.094 |          |           |                 |
 | Total                    |     0.132 |          |           |                 |

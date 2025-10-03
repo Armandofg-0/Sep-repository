@@ -24,6 +24,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_settin
 # IP: bd/design_1/ip/design_1_ruleta_0_0/design_1_ruleta_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ruleta_0_0 || ORIG_REF_NAME==design_1_ruleta_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_ruleta_0_0/src/c_shift_ram_0/c_shift_ram_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==c_shift_ram_0 || ORIG_REF_NAME==c_shift_ram_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_debouncer_0_0/design_1_debouncer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debouncer_0_0 || ORIG_REF_NAME==design_1_debouncer_0_0} -quiet] -quiet
 
@@ -138,6 +141,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_sm
 # IP: bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_vio_0_0 || ORIG_REF_NAME==design_1_vio_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
+
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_0_0/design_1_axi_traffic_gen_0_0_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_1_0/design_1_axi_traffic_gen_1_0.xdc
@@ -201,5 +207,13 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_vio_0_0 || ORIG_REF_NAME==design_1_vio_0_0} -quiet] -quiet
 
 # XDC: bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0_ooc.xdc
+
+# XDC: bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc
