@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Oct  2 23:43:38 2025'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Oct 11 15:30:37 2025'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2902540" description="" />
-  <keyValuePair key="date_generated" value="Thu Oct  2 23:43:35 2025" description="" />
+  <keyValuePair key="date_generated" value="Sat Oct 11 15:30:30 2025" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2020.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="075918b604a44511a46055a331b7079b" description="" />
-  <keyValuePair key="project_iteration" value="1" description="" />
-  <keyValuePair key="random_id" value="1329ec8c5e30547a907f2ad37ba6fd80" description="" />
-  <keyValuePair key="registration_id" value="1329ec8c5e30547a907f2ad37ba6fd80" description="" />
+  <keyValuePair key="project_iteration" value="2" description="" />
+  <keyValuePair key="random_id" value="334b16f596f75c8bbff6d05355950ac1" description="" />
+  <keyValuePair key="registration_id" value="334b16f596f75c8bbff6d05355950ac1" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
   <keyValuePair key="target_device" value="xc7z010" description="" />
   <keyValuePair key="target_family" value="zynq" description="" />
@@ -19,8 +19,8 @@
   <keyValuePair key="tool_flow" value="Vivado" description="" />
  </section>
  <section name="user_environment" level="1" order="2" description="">
-  <keyValuePair key="cpu_name" value="12th Gen Intel(R) Core(TM) i5-1235U" description="" />
-  <keyValuePair key="cpu_speed" value="2496 MHz" description="" />
+  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz" description="" />
+  <keyValuePair key="cpu_speed" value="1992 MHz" description="" />
   <keyValuePair key="os_name" value="Windows Server 2016 or Windows 10" description="" />
   <keyValuePair key="os_release" value="major release  (build 9200)" description="" />
   <keyValuePair key="system_ram" value="8.000 GB" description="" />
@@ -5566,7 +5566,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg400" description="" />
-   <keyValuePair key="pct_clock_constrained" value="19.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="14.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="0" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -5957,10 +5957,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:03:12s" description="" />
+   <keyValuePair key="elapsed" value="00:03:46s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="851.395MB" description="" />
-   <keyValuePair key="memory_peak" value="1912.078MB" description="" />
+   <keyValuePair key="memory_gain" value="934.086MB" description="" />
+   <keyValuePair key="memory_peak" value="1995.391MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="11" description="">
@@ -6021,24 +6021,33 @@
  </section>
  <section name="vivado_usage" level="1" order="12" description="">
   <section name="gui_handlers" level="2" order="1" description="">
-   <keyValuePair key="basedialog_ok" value="1" description="" />
-   <keyValuePair key="basedialog_yes" value="1" description="" />
-   <keyValuePair key="filesetpanel_file_set_panel_tree" value="6" description="" />
+   <keyValuePair key="basedialog_ok" value="3" description="" />
+   <keyValuePair key="basedialog_yes" value="2" description="" />
+   <keyValuePair key="filesetpanel_file_set_panel_tree" value="12" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="2" description="" />
+   <keyValuePair key="hacgccoefilewidget_browse" value="1" description="" />
    <keyValuePair key="mainmenumgr_tools" value="2" description="" />
    <keyValuePair key="pacommandnames_generate_composite_file" value="2" description="" />
    <keyValuePair key="pacommandnames_run_bitgen" value="1" description="" />
-   <keyValuePair key="paviews_project_summary" value="1" description="" />
+   <keyValuePair key="paviews_code" value="1" description="" />
+   <keyValuePair key="paviews_project_summary" value="2" description="" />
+   <keyValuePair key="progressdialog_background" value="1" description="" />
    <keyValuePair key="rdicommands_custom_commands" value="5" description="" />
    <keyValuePair key="simpleoutputproductdialog_generate_output_products_immediately" value="1" description="" />
-   <keyValuePair key="syntheticagettingstartedview_recent_projects" value="1" description="" />
-   <keyValuePair key="tclconsoleview_tcl_console_code_editor" value="2" description="" />
+   <keyValuePair key="syntheticagettingstartedview_recent_projects" value="2" description="" />
+   <keyValuePair key="systembuildermenu_ip_documentation" value="3" description="" />
+   <keyValuePair key="systembuilderview_orientation" value="3" description="" />
+   <keyValuePair key="systembuilderview_pinning" value="5" description="" />
+   <keyValuePair key="tclconsoleview_tcl_console_code_editor" value="4" description="" />
   </section>
   <section name="java_command_handlers" level="2" order="2" description="">
+   <keyValuePair key="customizersbblock" value="1" description="" />
    <keyValuePair key="managecompositetargets" value="2" description="" />
-   <keyValuePair key="runbitgen" value="1" description="" />
+   <keyValuePair key="runbitgen" value="2" description="" />
+   <keyValuePair key="saversbdesign" value="1" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="1" description="" />
+   <keyValuePair key="guimode" value="3" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

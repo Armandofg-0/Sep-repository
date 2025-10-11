@@ -24,6 +24,7 @@
     <Object name="design_1_i/led_controller_0_leds[3:0]" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/ruleta_0_result[3:0]" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/state_machine_0_state[1:0]" gui_info=""/>
+    <Object name="design_1_i/vio_0_probe_out0" gui_info="hw_vios/hw_vio_1=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -126,12 +127,12 @@
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_HINT" value="OutputDisplay:Toggle;"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE" value="1"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>
