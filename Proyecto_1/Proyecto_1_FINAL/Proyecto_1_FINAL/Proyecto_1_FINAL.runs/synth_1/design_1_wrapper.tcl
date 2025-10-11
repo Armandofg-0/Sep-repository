@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
 set_msg_config  -id {[BD 41-1306]}  -suppress 
@@ -88,6 +91,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
 set_property ip_repo_paths {
+  c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rgb_alarm/rgb_alarm_1.0
+  c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/alarm/alarm_1.0
   c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rainbow/rgb_rainbow_1.0
   c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores
 } [current_project]
@@ -100,6 +105,10 @@ add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files/
 add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files/addr.coe
 add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files/mask.coe
 add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files/ctrl.coe
+add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files_2/data.coe
+add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files_2/addr.coe
+add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files_2/mask.coe
+add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/COE_Files_2/ctrl.coe
 read_vhdl -library xil_defaultlib C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 add_files C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_axi_traffic_gen_0_0/design_1_axi_traffic_gen_0_0_ooc.xdc]
@@ -134,6 +143,7 @@ set_property used_in_synthesis false [get_files -all c:/Users/Karlsen/Sep-reposi
 set_property used_in_implementation false [get_files -all c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/ip/design_1_axi_traffic_gen_2_0/design_1_axi_traffic_gen_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

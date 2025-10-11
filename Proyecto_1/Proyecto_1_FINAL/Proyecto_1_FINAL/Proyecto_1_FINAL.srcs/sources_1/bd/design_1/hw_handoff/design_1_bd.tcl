@@ -164,8 +164,6 @@ proc create_root_design { parentCell } {
   set btn_3 [ create_bd_port -dir I btn_3 ]
   set clk [ create_bd_port -dir I -type clk -freq_hz 125000000 clk ]
   set leds [ create_bd_port -dir O -from 3 -to 0 leds ]
-  set rgb_B [ create_bd_port -dir O rgb_B ]
-  set rgb_G [ create_bd_port -dir O rgb_G ]
   set rgb_R [ create_bd_port -dir O rgb_R ]
   set sw [ create_bd_port -dir I -from 3 -to 0 sw ]
 
@@ -200,6 +198,24 @@ proc create_root_design { parentCell } {
   # Create instance: axi_traffic_gen_1, and set properties
   set axi_traffic_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_traffic_gen:3.0 axi_traffic_gen_1 ]
 
+  # Create instance: axi_traffic_gen_2, and set properties
+  set axi_traffic_gen_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_traffic_gen:3.0 axi_traffic_gen_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ATG_MODE {AXI4-Lite} \
+   CONFIG.C_ATG_SYSINIT_MODES {System_Test} \
+   CONFIG.C_ATG_SYSTEM_CMD_MAX_RETRY {2147483647} \
+   CONFIG.C_ATG_SYSTEM_INIT_ADDR_MIF {../../../../../../../COE_Files_2/addr.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_CTRL_MIF {../../../../../../../COE_Files_2/ctrl.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_DATA_MIF {../../../../../../../COE_Files_2/data.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_MASK_MIF {../../../../../../../COE_Files_2/mask.coe} \
+ ] $axi_traffic_gen_2
+
+  # Create instance: axi_traffic_gen_2_axi_periph, and set properties
+  set axi_traffic_gen_2_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_traffic_gen_2_axi_periph ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {1} \
+ ] $axi_traffic_gen_2_axi_periph
+
   # Create instance: clk_manager_0, and set properties
   set clk_manager_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:clk_manager:1.0 clk_manager_0 ]
 
@@ -226,6 +242,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: led_controller_0, and set properties
   set led_controller_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:led_controller:1.0 led_controller_0 ]
+
+  # Create instance: rgb_alarm_0, and set properties
+  set rgb_alarm_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:rgb_alarm:1.0 rgb_alarm_0 ]
 
   # Create instance: rgb_rainbow_0, and set properties
   set rgb_rainbow_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:rgb_rainbow:1.0 rgb_rainbow_0 ]
@@ -257,6 +276,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins axi_traffic_gen_1/S_AXI]
   connect_bd_intf_net -intf_net axi_traffic_gen_0_M_AXI_LITE_CH1 [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_traffic_gen_0/M_AXI_LITE_CH1]
   connect_bd_intf_net -intf_net axi_traffic_gen_1_M_AXI [get_bd_intf_pins axi_smc_1/S00_AXI] [get_bd_intf_pins axi_traffic_gen_1/M_AXI]
+  connect_bd_intf_net -intf_net axi_traffic_gen_2_M_AXI_LITE_CH1 [get_bd_intf_pins axi_traffic_gen_2/M_AXI_LITE_CH1] [get_bd_intf_pins axi_traffic_gen_2_axi_periph/S00_AXI]
+  connect_bd_intf_net -intf_net axi_traffic_gen_2_axi_periph_M00_AXI [get_bd_intf_pins axi_traffic_gen_2_axi_periph/M00_AXI] [get_bd_intf_pins rgb_alarm_0/S00_AXI]
 
   # Create port connections
   connect_bd_net -net apuesta_0_guess [get_bd_pins apuesta_0/guess] [get_bd_pins ila_0/probe2] [get_bd_pins led_controller_0/guess]
@@ -264,17 +285,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net btn_1_1 [get_bd_ports btn_1] [get_bd_pins debouncer_2/button]
   connect_bd_net -net btn_2_1 [get_bd_ports btn_2] [get_bd_pins debouncer_1/button]
   connect_bd_net -net btn_3_0_1 [get_bd_ports btn_3] [get_bd_pins clk_manager_0/btn_3]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins apuesta_0/clk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins clk_manager_0/clk] [get_bd_pins debouncer_0/clk] [get_bd_pins debouncer_1/clk] [get_bd_pins debouncer_2/clk] [get_bd_pins ila_0/clk] [get_bd_pins rgb_rainbow_0/clk] [get_bd_pins rgb_rainbow_0/s00_axi_aclk] [get_bd_pins rst_clk_125M/slowest_sync_clk] [get_bd_pins ruleta_0/clk] [get_bd_pins settings_0/clk] [get_bd_pins state_machine_0/clk] [get_bd_pins vio_0/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins apuesta_0/clk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins axi_traffic_gen_2/s_axi_aclk] [get_bd_pins axi_traffic_gen_2_axi_periph/ACLK] [get_bd_pins axi_traffic_gen_2_axi_periph/M00_ACLK] [get_bd_pins axi_traffic_gen_2_axi_periph/S00_ACLK] [get_bd_pins clk_manager_0/clk] [get_bd_pins debouncer_0/clk] [get_bd_pins debouncer_1/clk] [get_bd_pins debouncer_2/clk] [get_bd_pins ila_0/clk] [get_bd_pins rgb_alarm_0/clk] [get_bd_pins rgb_alarm_0/s00_axi_aclk] [get_bd_pins rgb_rainbow_0/clk] [get_bd_pins rgb_rainbow_0/s00_axi_aclk] [get_bd_pins rst_clk_125M/slowest_sync_clk] [get_bd_pins ruleta_0/clk] [get_bd_pins settings_0/clk] [get_bd_pins state_machine_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net clk_manager_0_special_clk_out [get_bd_pins clk_manager_0/special_clk_out] [get_bd_pins ruleta_0/special_clk_out]
   connect_bd_net -net clk_manager_0_stop [get_bd_pins clk_manager_0/stop] [get_bd_pins ruleta_0/stop] [get_bd_pins state_machine_0/stop]
   connect_bd_net -net debouncer_0_debounced_pulse [get_bd_pins debouncer_0/debounced_pulse] [get_bd_pins state_machine_0/btn_0]
   connect_bd_net -net debouncer_1_debounced_pulse [get_bd_pins debouncer_1/debounced_pulse] [get_bd_pins settings_0/btn_2]
   connect_bd_net -net debouncer_2_debounced_pulse [get_bd_pins debouncer_2/debounced_pulse] [get_bd_pins settings_0/btn_1]
   connect_bd_net -net led_controller_0_leds [get_bd_ports leds] [get_bd_pins ila_0/probe1] [get_bd_pins led_controller_0/leds]
-  connect_bd_net -net rgb_rainbow_0_rgb_B [get_bd_ports rgb_B] [get_bd_pins rgb_rainbow_0/rgb_B]
-  connect_bd_net -net rgb_rainbow_0_rgb_G [get_bd_ports rgb_G] [get_bd_pins rgb_rainbow_0/rgb_G]
-  connect_bd_net -net rgb_rainbow_0_rgb_R [get_bd_ports rgb_R] [get_bd_pins rgb_rainbow_0/rgb_R]
-  connect_bd_net -net rst_clk_125M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins rgb_rainbow_0/s00_axi_aresetn] [get_bd_pins rst_clk_125M/peripheral_aresetn]
+  connect_bd_net -net rgb_alarm_0_rgb_R [get_bd_ports rgb_R] [get_bd_pins rgb_alarm_0/rgb_R]
+  connect_bd_net -net rst_clk_125M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins axi_traffic_gen_2/s_axi_aresetn] [get_bd_pins axi_traffic_gen_2_axi_periph/ARESETN] [get_bd_pins axi_traffic_gen_2_axi_periph/M00_ARESETN] [get_bd_pins axi_traffic_gen_2_axi_periph/S00_ARESETN] [get_bd_pins rgb_alarm_0/s00_axi_aresetn] [get_bd_pins rgb_rainbow_0/s00_axi_aresetn] [get_bd_pins rst_clk_125M/peripheral_aresetn]
   connect_bd_net -net ruleta_0_result [get_bd_pins ila_0/probe3] [get_bd_pins led_controller_0/ruleta_out] [get_bd_pins ruleta_0/result]
   connect_bd_net -net settings_0_difficulty [get_bd_pins clk_manager_0/difficulty] [get_bd_pins ruleta_0/difficulty] [get_bd_pins settings_0/difficulty]
   connect_bd_net -net settings_0_led [get_bd_pins led_controller_0/settings_out] [get_bd_pins settings_0/led]
@@ -285,6 +304,7 @@ proc create_root_design { parentCell } {
   # Create address segments
   assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_0/Reg1] [get_bd_addr_segs axi_traffic_gen_1/S_AXI/Reg0] -force
   assign_bd_address -offset 0x76000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_1/Data] [get_bd_addr_segs rgb_rainbow_0/S00_AXI/S00_AXI_mem] -force
+  assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_2/Reg1] [get_bd_addr_segs rgb_alarm_0/S00_AXI/S00_AXI_reg] -force
 
 
   # Restore current instance

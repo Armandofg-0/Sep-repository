@@ -144,6 +144,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_vio_0_
 # IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_axi_traffic_gen_2_0/design_1_axi_traffic_gen_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_traffic_gen_2_0 || ORIG_REF_NAME==design_1_axi_traffic_gen_2_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_rgb_alarm_0_0/design_1_rgb_alarm_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rgb_alarm_0_0 || ORIG_REF_NAME==design_1_rgb_alarm_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_traffic_gen_2_axi_periph_0/design_1_axi_traffic_gen_2_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_traffic_gen_2_axi_periph_0 || ORIG_REF_NAME==design_1_axi_traffic_gen_2_axi_periph_0} -quiet] -quiet
+
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_0_0/design_1_axi_traffic_gen_0_0_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_1_0/design_1_axi_traffic_gen_1_0.xdc
@@ -215,5 +224,7 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc
+
+# XDC: bd/design_1/ip/design_1_axi_traffic_gen_2_0/design_1_axi_traffic_gen_2_0_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc

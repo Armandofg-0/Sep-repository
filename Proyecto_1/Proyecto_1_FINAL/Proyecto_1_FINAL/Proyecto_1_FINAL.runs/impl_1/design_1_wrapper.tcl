@@ -125,7 +125,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
@@ -136,6 +138,8 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.cache/wt [current_project]
   set_property parent.project_path C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.xpr [current_project]
   set_property ip_repo_paths {
+  C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rgb_alarm/rgb_alarm_1.0
+  C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/alarm/alarm_1.0
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rainbow/rgb_rainbow_1.0
   C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores
 } [current_project]

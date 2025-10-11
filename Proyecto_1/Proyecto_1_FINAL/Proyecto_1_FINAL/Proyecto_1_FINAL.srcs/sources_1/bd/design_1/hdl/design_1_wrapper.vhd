@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Oct 11 15:19:54 2025
+--Date        : Sat Oct 11 20:18:42 2025
 --Host        : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -19,8 +19,6 @@ entity design_1_wrapper is
     btn_3 : in STD_LOGIC;
     clk : in STD_LOGIC;
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb_B : out STD_LOGIC;
-    rgb_G : out STD_LOGIC;
     rgb_R : out STD_LOGIC;
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -36,9 +34,7 @@ architecture STRUCTURE of design_1_wrapper is
     btn_3 : in STD_LOGIC;
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb_R : out STD_LOGIC;
-    rgb_G : out STD_LOGIC;
-    rgb_B : out STD_LOGIC
+    rgb_R : out STD_LOGIC
   );
   end component design_1;
 begin
@@ -50,8 +46,6 @@ design_1_i: component design_1
       btn_3 => btn_3,
       clk => clk,
       leds(3 downto 0) => leds(3 downto 0),
-      rgb_B => rgb_B,
-      rgb_G => rgb_G,
       rgb_R => rgb_R,
       sw(3 downto 0) => sw(3 downto 0)
     );

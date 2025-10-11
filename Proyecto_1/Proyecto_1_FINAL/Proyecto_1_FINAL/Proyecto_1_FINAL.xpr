@@ -29,6 +29,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../IP_Cores/rgb_alarm/rgb_alarm_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../IP_Cores/alarm/alarm_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../IP_Cores/rainbow/rgb_rainbow_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../IP_Cores"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -102,6 +104,30 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../COE_Files/ctrl.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../COE_Files_2/data.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../COE_Files_2/addr.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../COE_Files_2/mask.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../COE_Files_2/ctrl.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
