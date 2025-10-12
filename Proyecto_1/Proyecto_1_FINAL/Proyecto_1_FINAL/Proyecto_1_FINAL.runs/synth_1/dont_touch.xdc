@@ -6,9 +6,6 @@
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_led_controller_0_0/design_1_led_controller_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_led_controller_0_0 || ORIG_REF_NAME==design_1_led_controller_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_state_machine_0_0/design_1_state_machine_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_state_machine_0_0 || ORIG_REF_NAME==design_1_state_machine_0_0} -quiet] -quiet
 
@@ -152,6 +149,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rgb_al
 
 # IP: bd/design_1/ip/design_1_axi_traffic_gen_2_axi_periph_0/design_1_axi_traffic_gen_2_axi_periph_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_traffic_gen_2_axi_periph_0 || ORIG_REF_NAME==design_1_axi_traffic_gen_2_axi_periph_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_result_0_0/design_1_result_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_result_0_0 || ORIG_REF_NAME==design_1_result_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_led_controller_0_1/design_1_led_controller_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_led_controller_0_1 || ORIG_REF_NAME==design_1_led_controller_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_rgb_controller_0_1/design_1_rgb_controller_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rgb_controller_0_1 || ORIG_REF_NAME==design_1_rgb_controller_0_1} -quiet] -quiet
 
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_0_0/design_1_axi_traffic_gen_0_0_ooc.xdc
 

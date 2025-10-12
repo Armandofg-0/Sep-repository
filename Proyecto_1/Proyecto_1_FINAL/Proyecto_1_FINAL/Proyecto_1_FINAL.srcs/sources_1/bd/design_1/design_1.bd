@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF4C9414ED3686E81",
+      "boundary_crc": "0xA682ED3AEA26BD3C",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -10,7 +10,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "led_controller_0": "",
       "state_machine_0": "",
       "clk_manager_0": "",
       "apuesta_0": "",
@@ -23,7 +22,6 @@
       "axi_smc": "",
       "rst_clk_125M": "",
       "axi_smc_1": "",
-      "rgb_rainbow_0": "",
       "vio_0": "",
       "ila_0": "",
       "ruleta_0": "",
@@ -31,7 +29,11 @@
       "axi_traffic_gen_2_axi_periph": {
         "s00_couplers": {}
       },
-      "rgb_alarm_0": ""
+      "rgb_alarm_0": "",
+      "result_0": "",
+      "rgb_rainbow_0": "",
+      "led_controller_0": "",
+      "rgb_controller_0": ""
     },
     "ports": {
       "clk": {
@@ -83,13 +85,15 @@
       },
       "rgb_R": {
         "direction": "O"
+      },
+      "rgb_G": {
+        "direction": "O"
+      },
+      "rgb_B": {
+        "direction": "O"
       }
     },
     "components": {
-      "led_controller_0": {
-        "vlnv": "xilinx.com:user:led_controller:1.0",
-        "xci_name": "design_1_led_controller_0_0"
-      },
       "state_machine_0": {
         "vlnv": "xilinx.com:user:state_machine:1.0",
         "xci_name": "design_1_state_machine_0_0"
@@ -327,10 +331,6 @@
             }
           }
         }
-      },
-      "rgb_rainbow_0": {
-        "vlnv": "xilinx.com:user:rgb_rainbow:1.0",
-        "xci_name": "design_1_rgb_rainbow_0_1"
       },
       "vio_0": {
         "vlnv": "xilinx.com:ip:vio:3.0",
@@ -582,15 +582,25 @@
       "rgb_alarm_0": {
         "vlnv": "xilinx.com:user:rgb_alarm:1.0",
         "xci_name": "design_1_rgb_alarm_0_0"
+      },
+      "result_0": {
+        "vlnv": "xilinx.com:user:result:1.0",
+        "xci_name": "design_1_result_0_0"
+      },
+      "rgb_rainbow_0": {
+        "vlnv": "xilinx.com:user:rgb_rainbow:1.0",
+        "xci_name": "design_1_rgb_rainbow_0_1"
+      },
+      "led_controller_0": {
+        "vlnv": "xilinx.com:user:led_controller:1.0",
+        "xci_name": "design_1_led_controller_0_1"
+      },
+      "rgb_controller_0": {
+        "vlnv": "xilinx.com:user:rgb_controller:1.0",
+        "xci_name": "design_1_rgb_controller_0_1"
       }
     },
     "interface_nets": {
-      "axi_traffic_gen_2_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "axi_traffic_gen_2_axi_periph/M00_AXI",
-          "rgb_alarm_0/S00_AXI"
-        ]
-      },
       "axi_traffic_gen_2_M_AXI_LITE_CH1": {
         "interface_ports": [
           "axi_traffic_gen_2/M_AXI_LITE_CH1",
@@ -603,12 +613,6 @@
           "axi_smc/S00_AXI"
         ]
       },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_traffic_gen_1/S_AXI"
-        ]
-      },
       "axi_smc_1_M00_AXI": {
         "interface_ports": [
           "axi_smc_1/M00_AXI",
@@ -619,6 +623,18 @@
         "interface_ports": [
           "axi_traffic_gen_1/M_AXI",
           "axi_smc_1/S00_AXI"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_traffic_gen_1/S_AXI"
+        ]
+      },
+      "axi_traffic_gen_2_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "axi_traffic_gen_2_axi_periph/M00_AXI",
+          "rgb_alarm_0/S00_AXI"
         ]
       }
     },
@@ -634,8 +650,6 @@
           "debouncer_1/clk",
           "debouncer_0/clk",
           "axi_traffic_gen_0/s_axi_aclk",
-          "rgb_rainbow_0/clk",
-          "rgb_rainbow_0/s00_axi_aclk",
           "vio_0/clk",
           "axi_traffic_gen_1/s_axi_aclk",
           "axi_smc/aclk",
@@ -648,7 +662,11 @@
           "axi_traffic_gen_2_axi_periph/M00_ACLK",
           "axi_traffic_gen_2_axi_periph/ACLK",
           "rgb_alarm_0/clk",
-          "rgb_alarm_0/s00_axi_aclk"
+          "rgb_alarm_0/s00_axi_aclk",
+          "rgb_rainbow_0/clk",
+          "rgb_rainbow_0/s00_axi_aclk",
+          "led_controller_0/clk",
+          "rgb_controller_0/clk"
         ]
       },
       "btn_3_0_1": {
@@ -663,9 +681,10 @@
           "clk_manager_0/state",
           "settings_0/state",
           "apuesta_0/state",
-          "led_controller_0/state",
           "ila_0/probe0",
-          "ruleta_0/state"
+          "ruleta_0/state",
+          "led_controller_0/state",
+          "rgb_controller_0/state"
         ]
       },
       "led_controller_0_leds": {
@@ -675,17 +694,12 @@
           "ila_0/probe1"
         ]
       },
-      "settings_0_led": {
-        "ports": [
-          "settings_0/led",
-          "led_controller_0/settings_out"
-        ]
-      },
       "apuesta_0_guess": {
         "ports": [
           "apuesta_0/guess",
-          "led_controller_0/guess",
-          "ila_0/probe2"
+          "ila_0/probe2",
+          "result_0/apuesta",
+          "led_controller_0/guess"
         ]
       },
       "clk_manager_0_stop": {
@@ -704,15 +718,17 @@
       "ruleta_0_result": {
         "ports": [
           "ruleta_0/result",
-          "led_controller_0/ruleta_out",
-          "ila_0/probe3"
+          "ila_0/probe3",
+          "result_0/result",
+          "led_controller_0/ruleta_out"
         ]
       },
       "settings_0_difficulty": {
         "ports": [
           "settings_0/difficulty",
           "clk_manager_0/difficulty",
-          "ruleta_0/difficulty"
+          "ruleta_0/difficulty",
+          "rgb_controller_0/difficulty"
         ]
       },
       "sw_0_1": {
@@ -764,12 +780,12 @@
           "axi_traffic_gen_1/s_axi_aresetn",
           "axi_smc/aresetn",
           "axi_smc_1/aresetn",
-          "rgb_rainbow_0/s00_axi_aresetn",
           "axi_traffic_gen_2/s_axi_aresetn",
           "axi_traffic_gen_2_axi_periph/S00_ARESETN",
           "axi_traffic_gen_2_axi_periph/M00_ARESETN",
           "axi_traffic_gen_2_axi_periph/ARESETN",
-          "rgb_alarm_0/s00_axi_aresetn"
+          "rgb_alarm_0/s00_axi_aresetn",
+          "rgb_rainbow_0/s00_axi_aresetn"
         ]
       },
       "vio_0_probe_out0": {
@@ -778,10 +794,58 @@
           "rst_clk_125M/ext_reset_in"
         ]
       },
+      "settings_0_led": {
+        "ports": [
+          "settings_0/led",
+          "led_controller_0/settings_out"
+        ]
+      },
+      "rgb_controller_0_rgb_G": {
+        "ports": [
+          "rgb_controller_0/rgb_G",
+          "rgb_G"
+        ]
+      },
+      "rgb_controller_0_rgb_R": {
+        "ports": [
+          "rgb_controller_0/rgb_R",
+          "rgb_R"
+        ]
+      },
+      "rgb_controller_0_rgb_B": {
+        "ports": [
+          "rgb_controller_0/rgb_B",
+          "rgb_B"
+        ]
+      },
+      "rgb_rainbow_0_rgb_G": {
+        "ports": [
+          "rgb_rainbow_0/rgb_G",
+          "rgb_controller_0/rgb_G_rainbow"
+        ]
+      },
+      "rgb_rainbow_0_rgb_R": {
+        "ports": [
+          "rgb_rainbow_0/rgb_R",
+          "rgb_controller_0/rgb_R_rainbow"
+        ]
+      },
+      "rgb_rainbow_0_rgb_B": {
+        "ports": [
+          "rgb_rainbow_0/rgb_B",
+          "rgb_controller_0/rgb_B_rainbow"
+        ]
+      },
       "rgb_alarm_0_rgb_R": {
         "ports": [
           "rgb_alarm_0/rgb_R",
-          "rgb_R"
+          "rgb_controller_0/rgb_R_evil"
+        ]
+      },
+      "result_0_win": {
+        "ports": [
+          "result_0/win",
+          "rgb_controller_0/win"
         ]
       }
     },

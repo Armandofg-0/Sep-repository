@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Oct 11 20:18:42 2025
+--Date        : Sun Oct 12 00:22:48 2025
 --Host        : DESKTOP-7OBFH0V running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -302,25 +302,18 @@ entity design_1 is
     btn_3 : in STD_LOGIC;
     clk : in STD_LOGIC;
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb_B : out STD_LOGIC;
+    rgb_G : out STD_LOGIC;
     rgb_R : out STD_LOGIC;
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=23,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=8,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_led_controller_0_0 is
-  port (
-    ruleta_out : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    settings_out : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    guess : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_1_led_controller_0_0;
   component design_1_state_machine_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -637,53 +630,6 @@ architecture STRUCTURE of design_1 is
     M00_AXI_rready : out STD_LOGIC
   );
   end component design_1_axi_smc_1_0;
-  component design_1_rgb_rainbow_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    rgb_R : out STD_LOGIC;
-    rgb_G : out STD_LOGIC;
-    rgb_B : out STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    s00_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s00_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_awlock : in STD_LOGIC;
-    s00_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awuser : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wlast : in STD_LOGIC;
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    s00_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s00_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_arlock : in STD_LOGIC;
-    s00_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_aruser : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rlast : out STD_LOGIC;
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC
-  );
-  end component design_1_rgb_rainbow_0_1;
   component design_1_vio_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -762,6 +708,85 @@ architecture STRUCTURE of design_1 is
     s00_axi_rready : in STD_LOGIC
   );
   end component design_1_rgb_alarm_0_0;
+  component design_1_result_0_0 is
+  port (
+    apuesta : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    result : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    win : out STD_LOGIC
+  );
+  end component design_1_result_0_0;
+  component design_1_rgb_rainbow_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    rgb_R : out STD_LOGIC;
+    rgb_G : out STD_LOGIC;
+    rgb_B : out STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    s00_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_awlock : in STD_LOGIC;
+    s00_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awuser : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wlast : in STD_LOGIC;
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    s00_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_arlock : in STD_LOGIC;
+    s00_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_aruser : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rlast : out STD_LOGIC;
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC
+  );
+  end component design_1_rgb_rainbow_0_1;
+  component design_1_led_controller_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    ruleta_out : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    settings_out : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    guess : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_led_controller_0_1;
+  component design_1_rgb_controller_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    difficulty : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    win : in STD_LOGIC;
+    rgb_G_rainbow : in STD_LOGIC;
+    rgb_R_rainbow : in STD_LOGIC;
+    rgb_B_rainbow : in STD_LOGIC;
+    rgb_R_evil : in STD_LOGIC;
+    rgb_G : out STD_LOGIC;
+    rgb_R : out STD_LOGIC;
+    rgb_B : out STD_LOGIC
+  );
+  end component design_1_rgb_controller_0_1;
   signal apuesta_0_guess : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -935,7 +960,14 @@ architecture STRUCTURE of design_1 is
   signal debouncer_1_debounced_pulse : STD_LOGIC;
   signal debouncer_2_debounced_pulse : STD_LOGIC;
   signal led_controller_0_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal result_0_win : STD_LOGIC;
   signal rgb_alarm_0_rgb_R : STD_LOGIC;
+  signal rgb_controller_0_rgb_B : STD_LOGIC;
+  signal rgb_controller_0_rgb_G : STD_LOGIC;
+  signal rgb_controller_0_rgb_R : STD_LOGIC;
+  signal rgb_rainbow_0_rgb_B : STD_LOGIC;
+  signal rgb_rainbow_0_rgb_G : STD_LOGIC;
+  signal rgb_rainbow_0_rgb_R : STD_LOGIC;
   signal rst_clk_125M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal ruleta_0_result : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal settings_0_difficulty : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -949,9 +981,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_traffic_gen_1_irq_out_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_2_done_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_2_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_rgb_rainbow_0_rgb_B_UNCONNECTED : STD_LOGIC;
-  signal NLW_rgb_rainbow_0_rgb_G_UNCONNECTED : STD_LOGIC;
-  signal NLW_rgb_rainbow_0_rgb_R_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_125M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_125M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_125M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -967,7 +996,9 @@ begin
   btn_3_0_1 <= btn_3;
   clk_0_1 <= clk;
   leds(3 downto 0) <= led_controller_0_leds(3 downto 0);
-  rgb_R <= rgb_alarm_0_rgb_R;
+  rgb_B <= rgb_controller_0_rgb_B;
+  rgb_G <= rgb_controller_0_rgb_G;
+  rgb_R <= rgb_controller_0_rgb_R;
   sw_0_1(3 downto 0) <= sw(3 downto 0);
 apuesta_0: component design_1_apuesta_0_0
      port map (
@@ -1322,13 +1353,20 @@ ila_0: component design_1_ila_0_0
       probe2(3 downto 0) => apuesta_0_guess(3 downto 0),
       probe3(3 downto 0) => ruleta_0_result(3 downto 0)
     );
-led_controller_0: component design_1_led_controller_0_0
+led_controller_0: component design_1_led_controller_0_1
      port map (
+      clk => clk_0_1,
       guess(3 downto 0) => apuesta_0_guess(3 downto 0),
       leds(3 downto 0) => led_controller_0_leds(3 downto 0),
       ruleta_out(3 downto 0) => ruleta_0_result(3 downto 0),
       settings_out(3 downto 0) => settings_0_led(3 downto 0),
       state(1 downto 0) => state_machine_0_state(1 downto 0)
+    );
+result_0: component design_1_result_0_0
+     port map (
+      apuesta(3 downto 0) => apuesta_0_guess(3 downto 0),
+      result(3 downto 0) => ruleta_0_result(3 downto 0),
+      win => result_0_win
     );
 rgb_alarm_0: component design_1_rgb_alarm_0_0
      port map (
@@ -1356,12 +1394,26 @@ rgb_alarm_0: component design_1_rgb_alarm_0_0
       s00_axi_wstrb(3 downto 0) => axi_traffic_gen_2_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => axi_traffic_gen_2_axi_periph_M00_AXI_WVALID
     );
+rgb_controller_0: component design_1_rgb_controller_0_1
+     port map (
+      clk => clk_0_1,
+      difficulty(3 downto 0) => settings_0_difficulty(3 downto 0),
+      rgb_B => rgb_controller_0_rgb_B,
+      rgb_B_rainbow => rgb_rainbow_0_rgb_B,
+      rgb_G => rgb_controller_0_rgb_G,
+      rgb_G_rainbow => rgb_rainbow_0_rgb_G,
+      rgb_R => rgb_controller_0_rgb_R,
+      rgb_R_evil => rgb_alarm_0_rgb_R,
+      rgb_R_rainbow => rgb_rainbow_0_rgb_R,
+      state(1 downto 0) => state_machine_0_state(1 downto 0),
+      win => result_0_win
+    );
 rgb_rainbow_0: component design_1_rgb_rainbow_0_1
      port map (
       clk => clk_0_1,
-      rgb_B => NLW_rgb_rainbow_0_rgb_B_UNCONNECTED,
-      rgb_G => NLW_rgb_rainbow_0_rgb_G_UNCONNECTED,
-      rgb_R => NLW_rgb_rainbow_0_rgb_R_UNCONNECTED,
+      rgb_B => rgb_rainbow_0_rgb_B,
+      rgb_G => rgb_rainbow_0_rgb_G,
+      rgb_R => rgb_rainbow_0_rgb_R,
       s00_axi_aclk => clk_0_1,
       s00_axi_araddr(9 downto 0) => axi_smc_1_M00_AXI_ARADDR(9 downto 0),
       s00_axi_arburst(1 downto 0) => axi_smc_1_M00_AXI_ARBURST(1 downto 0),

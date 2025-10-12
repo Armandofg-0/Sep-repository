@@ -3,9 +3,9 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Oct  3 16:24:39 2025">
+<application name="pa" timeStamp="Sat Oct 11 23:56:52 2025">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="fb4b7d50331945cc8ef79c03abc6fd02" type="ProjectID"/>
+<property name="ProjectID" value="12f74b54366c4e27b37b09015417ddb1" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
@@ -18,25 +18,14 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="CloseProject" value="1" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
-<property name="EditInIPPackagerHandler" value="1" type="JavaHandler"/>
-<property name="IPPackagerHandler" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
-<property name="BaseDialog_OK" value="2" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="4" type="GuiHandlerData"/>
-<property name="PACommandNames_CUSTOMIZE_RSB_BLOC" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_EDIT_IN_IP_PACKAGER" value="1" type="GuiHandlerData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="1" type="GuiHandlerData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="1" type="GuiHandlerData"/>
-<property name="SystemBuilderMenu_IP_DOCUMENTATION" value="3" type="GuiHandlerData"/>
-<property name="SystemBuilderView_ORIENTATION" value="1" type="GuiHandlerData"/>
-<property name="SystemBuilderView_PINNING" value="1" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="132" type="GuiMode"/>
+<property name="GuiMode" value="154" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="93" type="TclMode"/>
+<property name="TclMode" value="107" type="TclMode"/>
 </item>
 </section>
 </application>

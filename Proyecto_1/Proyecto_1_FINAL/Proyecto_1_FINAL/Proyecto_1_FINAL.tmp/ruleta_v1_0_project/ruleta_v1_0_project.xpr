@@ -6,7 +6,7 @@
 <Project Version="7" Minor="49" Path="c:/users/karlsen/sep-repository/proyecto_1/proyecto_1_final/proyecto_1_final/proyecto_1_final.tmp/ruleta_v1_0_project/ruleta_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="106a7794e3004f02802865f0b81e6220"/>
+    <Option Name="Id" Val="80efef2ab23b4dec8052533309d13954"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,6 +29,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rgb_alarm/rgb_alarm_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/alarm/alarm_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/rainbow/rgb_rainbow_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

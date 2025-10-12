@@ -1,70 +1,81 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.717936",
-   "Default View_TopLeft":"368,561",
+   "Default View_ScaleFactor":"0.667207",
+   "Default View_TopLeft":"1376,213",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
-preplace port btn_1 -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port btn_2 -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
-preplace port btn_0 -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
-preplace port btn_3 -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
-preplace port rgb_R -pg 1 -lvl 8 -x 2510 -y 1090 -defaultsOSRD
-preplace portBus leds -pg 1 -lvl 8 -x 2510 -y 480 -defaultsOSRD
-preplace portBus sw -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
-preplace inst led_controller_0 -pg 1 -lvl 6 -x 2110 -y 500 -defaultsOSRD
-preplace inst state_machine_0 -pg 1 -lvl 4 -x 1540 -y 350 -defaultsOSRD
-preplace inst clk_manager_0 -pg 1 -lvl 3 -x 1030 -y 130 -defaultsOSRD
-preplace inst apuesta_0 -pg 1 -lvl 5 -x 1840 -y 570 -defaultsOSRD
-preplace inst settings_0 -pg 1 -lvl 2 -x 680 -y 480 -defaultsOSRD
-preplace inst debouncer_0 -pg 1 -lvl 3 -x 1030 -y 360 -defaultsOSRD
-preplace inst debouncer_1 -pg 1 -lvl 1 -x 360 -y 510 -defaultsOSRD
-preplace inst debouncer_2 -pg 1 -lvl 1 -x 360 -y 70 -defaultsOSRD
-preplace inst axi_traffic_gen_0 -pg 1 -lvl 3 -x 1030 -y 710 -defaultsOSRD
-preplace inst axi_traffic_gen_1 -pg 1 -lvl 5 -x 1840 -y 740 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -x 1540 -y 770 -defaultsOSRD
-preplace inst rst_clk_125M -pg 1 -lvl 2 -x 680 -y 820 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 6 -x 2110 -y 740 -defaultsOSRD
-preplace inst rgb_rainbow_0 -pg 1 -lvl 7 -x 2380 -y 770 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 1 -x 360 -y 680 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 7 -x 2380 -y 580 -defaultsOSRD
-preplace inst ruleta_0 -pg 1 -lvl 5 -x 1840 -y 230 -defaultsOSRD
-preplace inst axi_traffic_gen_2 -pg 1 -lvl 3 -x 1030 -y 1020 -defaultsOSRD
-preplace inst axi_traffic_gen_2_axi_periph -pg 1 -lvl 4 -x 1540 -y 1060 -defaultsOSRD
-preplace inst rgb_alarm_0 -pg 1 -lvl 5 -x 1840 -y 1090 -defaultsOSRD
-preplace netloc clk_0_1 1 0 7 20 390 490 390 870 260 1180 260 1680 830 1960 830 2260
-preplace netloc btn_3_0_1 1 0 3 NJ 140 NJ 140 NJ
-preplace netloc state_machine_0_state 1 1 6 500 240 850 240 NJ 240 1700 410 1970 410 2250
-preplace netloc led_controller_0_leds 1 6 2 2270 480 NJ
-preplace netloc settings_0_led 1 2 4 N 490 NJ 490 NJ 490 NJ
-preplace netloc apuesta_0_guess 1 5 2 1980 600 NJ
-preplace netloc clk_manager_0_stop 1 3 2 1170 250 NJ
-preplace netloc clk_manager_0_special_clk_out 1 3 2 1180 230 NJ
-preplace netloc ruleta_0_result 1 5 2 1960 400 2240J
-preplace netloc settings_0_difficulty 1 2 3 860 270 NJ 270 NJ
-preplace netloc sw_0_1 1 0 5 NJ 590 NJ 590 NJ 590 NJ 590 NJ
-preplace netloc btn_1_1 1 0 1 NJ 80
-preplace netloc btn_2_1 1 0 1 NJ 520
-preplace netloc btn_0_1 1 0 3 30J 370 NJ 370 NJ
-preplace netloc debouncer_0_debounced_pulse 1 3 1 1170 360n
-preplace netloc debouncer_1_debounced_pulse 1 1 1 N 510
-preplace netloc debouncer_2_debounced_pulse 1 1 1 480 70n
-preplace netloc rst_clk_125M_peripheral_aresetn 1 2 5 880 790 1170 850 1700 840 1980 820 2270J
-preplace netloc vio_0_probe_out0 1 1 1 480 680n
-preplace netloc rgb_alarm_0_rgb_R 1 5 3 NJ 1090 NJ 1090 N
-preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 3 1 1170 690n
-preplace netloc axi_smc_1_M00_AXI 1 6 1 N 740
-preplace netloc axi_traffic_gen_1_M_AXI 1 5 1 N 720
-preplace netloc axi_smc_M00_AXI 1 4 1 1690 710n
-preplace netloc axi_traffic_gen_2_M_AXI_LITE_CH1 1 3 1 N 1000
-preplace netloc axi_traffic_gen_2_axi_periph_M00_AXI 1 4 1 N 1060
-levelinfo -pg 1 0 360 680 1030 1540 1840 2110 2380 2510
-pagesize -pg 1 -db -bbox -sgen -100 -80 2620 1190
+preplace port clk -pg 1 -lvl 0 -x -20 -y 460 -defaultsOSRD
+preplace port btn_1 -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
+preplace port btn_2 -pg 1 -lvl 0 -x -20 -y 370 -defaultsOSRD
+preplace port btn_0 -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
+preplace port btn_3 -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace port rgb_R -pg 1 -lvl 9 -x 2450 -y 630 -defaultsOSRD
+preplace port rgb_G -pg 1 -lvl 9 -x 2450 -y 600 -defaultsOSRD
+preplace port rgb_B -pg 1 -lvl 9 -x 2450 -y 660 -defaultsOSRD
+preplace portBus leds -pg 1 -lvl 9 -x 2450 -y 220 -defaultsOSRD
+preplace portBus sw -pg 1 -lvl 0 -x -20 -y 430 -defaultsOSRD
+preplace inst state_machine_0 -pg 1 -lvl 5 -x 1350 -y 260 -defaultsOSRD
+preplace inst clk_manager_0 -pg 1 -lvl 4 -x 1040 -y 90 -defaultsOSRD
+preplace inst apuesta_0 -pg 1 -lvl 6 -x 1700 -y 580 -defaultsOSRD
+preplace inst settings_0 -pg 1 -lvl 3 -x 740 -y 340 -defaultsOSRD
+preplace inst debouncer_0 -pg 1 -lvl 4 -x 1040 -y 250 -defaultsOSRD
+preplace inst debouncer_1 -pg 1 -lvl 2 -x 400 -y 360 -defaultsOSRD
+preplace inst debouncer_2 -pg 1 -lvl 2 -x 400 -y 170 -defaultsOSRD
+preplace inst axi_traffic_gen_0 -pg 1 -lvl 3 -x 740 -y 690 -defaultsOSRD
+preplace inst axi_traffic_gen_1 -pg 1 -lvl 5 -x 1350 -y 720 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1040 -y 690 -defaultsOSRD
+preplace inst rst_clk_125M -pg 1 -lvl 2 -x 400 -y 530 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 6 -x 1700 -y 940 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -x 120 -y 510 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 8 -x 2320 -y 400 -defaultsOSRD
+preplace inst ruleta_0 -pg 1 -lvl 6 -x 1700 -y 130 -defaultsOSRD
+preplace inst axi_traffic_gen_2 -pg 1 -lvl 5 -x 1350 -y 500 -defaultsOSRD
+preplace inst axi_traffic_gen_2_axi_periph -pg 1 -lvl 6 -x 1700 -y 760 -defaultsOSRD
+preplace inst rgb_alarm_0 -pg 1 -lvl 7 -x 2010 -y 570 -defaultsOSRD
+preplace inst result_0 -pg 1 -lvl 7 -x 2010 -y 430 -defaultsOSRD
+preplace inst rgb_rainbow_0 -pg 1 -lvl 7 -x 2010 -y 750 -defaultsOSRD
+preplace inst led_controller_0 -pg 1 -lvl 7 -x 2010 -y 180 -defaultsOSRD
+preplace inst rgb_controller_0 -pg 1 -lvl 8 -x 2320 -y 620 -defaultsOSRD
+preplace netloc clk_0_1 1 0 8 0 450 220 250 580 250 900 320 1200 160 1520 240 1870 350 2160
+preplace netloc btn_3_0_1 1 0 4 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc state_machine_0_state 1 2 6 600 60 900 0 NJ 0 1530 250 1880 340 2170
+preplace netloc led_controller_0_leds 1 7 2 2190 220 NJ
+preplace netloc apuesta_0_guess 1 6 2 1850 360 2140J
+preplace netloc clk_manager_0_stop 1 4 2 1190 150 NJ
+preplace netloc clk_manager_0_special_clk_out 1 4 2 1200 130 NJ
+preplace netloc ruleta_0_result 1 6 2 1860 660 2150J
+preplace netloc settings_0_difficulty 1 3 5 890 180 1170J 170 1550 330 N 330 2180
+preplace netloc sw_0_1 1 0 6 NJ 430 NJ 430 NJ 430 NJ 430 1210J 420 1510J
+preplace netloc btn_1_1 1 0 2 NJ 180 NJ
+preplace netloc btn_2_1 1 0 2 NJ 370 NJ
+preplace netloc btn_0_1 1 0 4 NJ 240 NJ 240 NJ 240 880J
+preplace netloc debouncer_0_debounced_pulse 1 4 1 1170 250n
+preplace netloc debouncer_1_debounced_pulse 1 2 1 570 360n
+preplace netloc debouncer_2_debounced_pulse 1 2 1 590 170n
+preplace netloc rst_clk_125M_peripheral_aresetn 1 2 5 570 610 890 610 1210 810 1550 1020 1880
+preplace netloc vio_0_probe_out0 1 1 1 NJ 510
+preplace netloc settings_0_led 1 3 4 NJ 350 1180J 180 1540J 230 1840
+preplace netloc rgb_controller_0_rgb_G 1 8 1 N 600
+preplace netloc rgb_controller_0_rgb_R 1 8 1 2430 620n
+preplace netloc rgb_controller_0_rgb_B 1 8 1 2430 640n
+preplace netloc rgb_rainbow_0_rgb_G 1 7 1 2160 630n
+preplace netloc rgb_rainbow_0_rgb_R 1 7 1 2180 650n
+preplace netloc rgb_rainbow_0_rgb_B 1 7 1 2190 670n
+preplace netloc rgb_alarm_0_rgb_R 1 7 1 2130 570n
+preplace netloc result_0_win 1 7 1 2140 430n
+preplace netloc axi_smc_1_M00_AXI 1 6 1 1890 720n
+preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 3 1 N 670
+preplace netloc axi_traffic_gen_2_M_AXI_LITE_CH1 1 5 1 1500 480n
+preplace netloc axi_traffic_gen_1_M_AXI 1 5 1 1490 700n
+preplace netloc axi_smc_M00_AXI 1 4 1 N 690
+preplace netloc axi_traffic_gen_2_axi_periph_M00_AXI 1 6 1 1840 540n
+levelinfo -pg 1 -20 120 400 740 1040 1350 1700 2010 2320 2450
+pagesize -pg 1 -db -bbox -sgen -120 -160 2560 1030
 "
 }
 {
    "da_axi4_cnt":"3",
    "da_board_cnt":"1",
-   "da_clkrst_cnt":"7"
+   "da_clkrst_cnt":"8"
 }

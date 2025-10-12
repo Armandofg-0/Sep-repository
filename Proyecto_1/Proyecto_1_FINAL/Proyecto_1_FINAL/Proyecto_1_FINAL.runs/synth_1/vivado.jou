@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Oct 11 20:19:14 2025
-# Process ID: 33952
+# Start of session at: Sun Oct 12 00:23:01 2025
+# Process ID: 50392
 # Current directory: C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/Proyecto_1_FINAL/Proyecto_1_FINAL.runs/synth_1/design_1_wrapper.vds
