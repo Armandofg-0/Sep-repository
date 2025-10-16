@@ -235,11 +235,14 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_NUM_OF_PROBES {8} \
    CONFIG.C_PROBE0_WIDTH {2} \
    CONFIG.C_PROBE1_WIDTH {4} \
    CONFIG.C_PROBE2_WIDTH {4} \
    CONFIG.C_PROBE3_WIDTH {4} \
+   CONFIG.C_PROBE4_WIDTH {4} \
+   CONFIG.C_PROBE5_WIDTH {4} \
+   CONFIG.C_PROBE7_WIDTH {2} \
  ] $ila_0
 
   # Create instance: led_controller_0, and set properties
@@ -270,9 +273,6 @@ proc create_root_design { parentCell } {
 
   # Create instance: ruleta_0, and set properties
   set ruleta_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ruleta:1.0 ruleta_0 ]
-  set_property -dict [ list \
-   CONFIG.clk {} \
- ] $ruleta_0
 
   # Create instance: settings_0, and set properties
   set settings_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:settings:1.0 settings_0 ]
@@ -317,6 +317,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net rgb_rainbow_0_rgb_G [get_bd_pins rgb_controller_0/rgb_G_rainbow] [get_bd_pins rgb_rainbow_0/rgb_G]
   connect_bd_net -net rgb_rainbow_0_rgb_R [get_bd_pins rgb_controller_0/rgb_R_rainbow] [get_bd_pins rgb_rainbow_0/rgb_R]
   connect_bd_net -net rst_clk_125M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins axi_traffic_gen_2/s_axi_aresetn] [get_bd_pins axi_traffic_gen_2_axi_periph/ARESETN] [get_bd_pins axi_traffic_gen_2_axi_periph/M00_ARESETN] [get_bd_pins axi_traffic_gen_2_axi_periph/S00_ARESETN] [get_bd_pins rgb_alarm_0/s00_axi_aresetn] [get_bd_pins rgb_rainbow_0/s00_axi_aresetn] [get_bd_pins rst_clk_125M/peripheral_aresetn]
+  connect_bd_net -net ruleta_0_dbg_ram_din [get_bd_pins ila_0/probe4] [get_bd_pins ruleta_0/dbg_ram_din]
+  connect_bd_net -net ruleta_0_dbg_ram_q [get_bd_pins ila_0/probe5] [get_bd_pins ruleta_0/dbg_ram_q]
+  connect_bd_net -net ruleta_0_dbg_rot_enable [get_bd_pins ila_0/probe6] [get_bd_pins ruleta_0/dbg_rot_enable]
+  connect_bd_net -net ruleta_0_dbg_sel_delay [get_bd_pins ila_0/probe7] [get_bd_pins ruleta_0/dbg_sel_delay]
   connect_bd_net -net ruleta_0_result [get_bd_pins ila_0/probe3] [get_bd_pins led_controller_0/ruleta_out] [get_bd_pins result_0/result] [get_bd_pins ruleta_0/result]
   connect_bd_net -net settings_0_difficulty [get_bd_pins clk_manager_0/difficulty] [get_bd_pins rgb_controller_0/difficulty] [get_bd_pins ruleta_0/difficulty] [get_bd_pins settings_0/difficulty]
   connect_bd_net -net settings_0_led [get_bd_pins led_controller_0/settings_out] [get_bd_pins settings_0/led]

@@ -23,12 +23,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">125000000</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ"/>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -50,7 +45,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">design_1_clk</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -100,11 +95,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:01 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:123f2be5</spirit:value>
+            <spirit:value>9:9278afd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -115,7 +110,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:123f2be5</spirit:value>
+            <spirit:value>9:9278afd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -131,11 +126,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:01 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:123f2be5</spirit:value>
+            <spirit:value>9:9278afd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -150,11 +145,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:01 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9ea953f4</spirit:value>
+            <spirit:value>9:a3a716df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -170,11 +165,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:01 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9ea953f4</spirit:value>
+            <spirit:value>9:a3a716df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -253,7 +248,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/bff5/src/apuesta.vhd</spirit:name>
+        <spirit:name>../../ipshared/3145/src/apuesta.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -268,7 +263,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/bff5/src/apuesta.vhd</spirit:name>
+        <spirit:name>../../ipshared/3145/src/apuesta.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -292,27 +287,61 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>apuesta_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@103e455_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@553face3_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1586f991_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@78e85bfb_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4f784492_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44bc3ba7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fd7e6c9_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b610d6_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@633de146_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319626cd_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f9293d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@721749af_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222f3d1_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ba2725f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c559232_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b3bcd55_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25feb714_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4423c527_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@500fd276_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9aba239_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b1ed8_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fb6c75d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@401136f0_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19dabaf7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a517e81_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e5a408_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1859cf65_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@760dbd6e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dae6269_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3babc654_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c7bdd5f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47552896_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fd819b_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510e42e4_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dfed797_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20d878b7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dad6b82_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4223e551_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/apuesta</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.INSERT_VIP" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a88d4390"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fbc62009"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a8d16fc"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cce31ea0"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9b563617"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="9cda062c"/>
     </xilinx:packagingInfo>

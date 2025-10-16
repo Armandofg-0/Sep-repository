@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:ruleta:1.0
--- IP Revision: 7
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -60,7 +60,11 @@ ENTITY design_1_ruleta_0_0 IS
     special_clk_out : IN STD_LOGIC;
     stop : IN STD_LOGIC;
     difficulty : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    result : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    result : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    dbg_ram_din : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    dbg_ram_q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    dbg_rot_enable : OUT STD_LOGIC;
+    dbg_sel_delay : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
   );
 END design_1_ruleta_0_0;
 
@@ -77,7 +81,11 @@ ARCHITECTURE design_1_ruleta_0_0_arch OF design_1_ruleta_0_0 IS
       special_clk_out : IN STD_LOGIC;
       stop : IN STD_LOGIC;
       difficulty : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      result : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      result : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      dbg_ram_din : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      dbg_ram_q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      dbg_rot_enable : OUT STD_LOGIC;
+      dbg_sel_delay : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
     );
   END COMPONENT ruleta;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -97,6 +105,10 @@ BEGIN
       special_clk_out => special_clk_out,
       stop => stop,
       difficulty => difficulty,
-      result => result
+      result => result,
+      dbg_ram_din => dbg_ram_din,
+      dbg_ram_q => dbg_ram_q,
+      dbg_rot_enable => dbg_rot_enable,
+      dbg_sel_delay => dbg_sel_delay
     );
 END design_1_ruleta_0_0_arch;

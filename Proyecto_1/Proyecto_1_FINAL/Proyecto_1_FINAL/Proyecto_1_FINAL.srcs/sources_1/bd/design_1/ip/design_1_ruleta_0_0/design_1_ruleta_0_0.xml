@@ -95,11 +95,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 01:59:41 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:14 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bd5d6582</spirit:value>
+            <spirit:value>9:187fbc4d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -110,7 +110,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bd5d6582</spirit:value>
+            <spirit:value>9:187fbc4d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -126,11 +126,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:02 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:14 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bd5d6582</spirit:value>
+            <spirit:value>9:187fbc4d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -145,11 +145,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 01:59:41 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:14 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38bf0319</spirit:value>
+            <spirit:value>9:25bd7098</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -165,11 +165,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 03 02:10:02 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 15 22:44:14 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38bf0319</spirit:value>
+            <spirit:value>9:25bd7098</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -186,6 +186,9 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">125000000</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -265,6 +268,70 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>dbg_ram_din</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dbg_ram_q</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dbg_rot_enable</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dbg_sel_delay</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -278,23 +345,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/4ec8/src/ruleta.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/c_shift_ram_0/c_shift_ram_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_dificl.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_dificl.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_facil.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_facil.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_medio.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_medio.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/79fe/src/ruleta.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -309,23 +376,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/4ec8/src/ruleta.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/c_shift_ram_0/c_shift_ram_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_dificl.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_dificl.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_facil.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_facil.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../Modules/rotacion_medio.vhd</spirit:name>
+        <spirit:name>../../ipshared/79fe/src/rotacion_medio.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/79fe/src/ruleta.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -341,109 +408,45 @@
   <spirit:description>ruleta_v1_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
-      <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_ruleta_0_0</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
       <spirit:name>INIT_CYCLES</spirit:name>
       <spirit:displayName>Init Cycles</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INIT_CYCLES" spirit:minimum="0" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>clk</spirit:name>
-      <spirit:displayName>Clk</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.clk"/>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_ruleta_0_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>ruleta_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce7d588_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32027437_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a3ce3fe_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd9e585_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b12a929_ARCHIVE_LOCATION">c:/Users/Karlsen/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c539104_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad19dd2_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@428ccb5c_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6460e795_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@125384c3_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@710f6cb4_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40084588_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ec1e0dd_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@74469a92_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7d18ed_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb9559a_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@129ca9e1_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@457314da_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f3e116c_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb3057e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c803830_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a4ff8f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1b2da_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2317cd63_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da91661_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@30c9a0f8_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@34e36cb2_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e651e9_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51790566_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e1c03ab_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7316f6af_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70b8386d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eab1879_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f733d3d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@131a9cef_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d09176_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@240bb9f7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@208d2f7d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ad62a7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a02267_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a3fa07a_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cad5b60_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@688aa761_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1902c0bc_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@68413f3e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7e9859_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ca571d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e21cde3_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2583d723_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e5f8c46_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@590d49f2_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ffd00b2_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59830f6f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d6bebfc_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f9116f8_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@478784be_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@501a664e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d44dd5_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@114b8f57_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@572a7fb6_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b78acdb_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@134f35a1_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4400fcb8_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa03029_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@91f894d_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f536610_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6973889c_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@47632552_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ec8925_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76004bc3_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e7a109b_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@af5fb4e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@797e7443_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cab73db_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36970fc1_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b438f0_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cade739_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d15000c_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cac1cc4_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d527bf_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e99270f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1719b2c8_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e239b0_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/Sep-repository/Proyecto_1/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@289c1693_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34bf4927_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b70fa7_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a18083a_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8947846_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@368cb82f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c6c6e03_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cf142ad_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a55a1f9_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eab2a51_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b8f1ff_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b246a22_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3697804e_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7737c5c4_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71953374_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@384a603f_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@355bbdbf_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6811ea65_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6296ac11_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205fb078_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31af5326_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2111aff5_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9d6364_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@135ff11a_ARCHIVE_LOCATION">c:/Users/fuent/Desktop/niu/Proyecto_1_FINAL/IP_Cores/ruleta</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
@@ -453,16 +456,15 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.INSERT_VIP" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.clk" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a8d16fc"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8603f7d0"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c4e0c6c1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b6f30401"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c305aaf0"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e821f302"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="44c309eb"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="de9fc28e"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

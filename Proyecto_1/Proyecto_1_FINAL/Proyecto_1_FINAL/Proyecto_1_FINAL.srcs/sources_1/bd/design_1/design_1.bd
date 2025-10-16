@@ -12,7 +12,6 @@
     "design_tree": {
       "state_machine_0": "",
       "clk_manager_0": "",
-      "apuesta_0": "",
       "settings_0": "",
       "debouncer_0": "",
       "debouncer_1": "",
@@ -24,7 +23,6 @@
       "axi_smc_1": "",
       "vio_0": "",
       "ila_0": "",
-      "ruleta_0": "",
       "axi_traffic_gen_2": "",
       "axi_traffic_gen_2_axi_periph": {
         "s00_couplers": {}
@@ -33,7 +31,9 @@
       "result_0": "",
       "rgb_rainbow_0": "",
       "led_controller_0": "",
-      "rgb_controller_0": ""
+      "rgb_controller_0": "",
+      "apuesta_0": "",
+      "ruleta_0": ""
     },
     "ports": {
       "clk": {
@@ -101,10 +101,6 @@
       "clk_manager_0": {
         "vlnv": "xilinx.com:user:clk_manager:1.0",
         "xci_name": "design_1_clk_manager_0_0"
-      },
-      "apuesta_0": {
-        "vlnv": "xilinx.com:user:apuesta:1.0",
-        "xci_name": "design_1_apuesta_0_0"
       },
       "settings_0": {
         "vlnv": "xilinx.com:user:settings:1.0",
@@ -352,7 +348,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "4"
+            "value": "8"
           },
           "C_PROBE0_WIDTH": {
             "value": "2"
@@ -365,12 +361,17 @@
           },
           "C_PROBE3_WIDTH": {
             "value": "4"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "2"
           }
         }
-      },
-      "ruleta_0": {
-        "vlnv": "xilinx.com:user:ruleta:1.0",
-        "xci_name": "design_1_ruleta_0_0"
       },
       "axi_traffic_gen_2": {
         "vlnv": "xilinx.com:ip:axi_traffic_gen:3.0",
@@ -539,16 +540,16 @@
           }
         },
         "interface_nets": {
-          "axi_traffic_gen_2_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_axi_traffic_gen_2_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "axi_traffic_gen_2_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -598,15 +599,17 @@
       "rgb_controller_0": {
         "vlnv": "xilinx.com:user:rgb_controller:1.0",
         "xci_name": "design_1_rgb_controller_0_1"
+      },
+      "apuesta_0": {
+        "vlnv": "xilinx.com:user:apuesta:1.0",
+        "xci_name": "design_1_apuesta_0_0"
+      },
+      "ruleta_0": {
+        "vlnv": "xilinx.com:user:ruleta:1.0",
+        "xci_name": "design_1_ruleta_0_0"
       }
     },
     "interface_nets": {
-      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
-        "interface_ports": [
-          "axi_traffic_gen_2/M_AXI_LITE_CH1",
-          "axi_traffic_gen_2_axi_periph/S00_AXI"
-        ]
-      },
       "axi_traffic_gen_0_M_AXI_LITE_CH1": {
         "interface_ports": [
           "axi_traffic_gen_0/M_AXI_LITE_CH1",
@@ -619,16 +622,22 @@
           "rgb_rainbow_0/S00_AXI"
         ]
       },
-      "axi_traffic_gen_1_M_AXI": {
-        "interface_ports": [
-          "axi_traffic_gen_1/M_AXI",
-          "axi_smc_1/S00_AXI"
-        ]
-      },
       "axi_smc_M00_AXI": {
         "interface_ports": [
           "axi_smc/M00_AXI",
           "axi_traffic_gen_1/S_AXI"
+        ]
+      },
+      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
+        "interface_ports": [
+          "axi_traffic_gen_2/M_AXI_LITE_CH1",
+          "axi_traffic_gen_2_axi_periph/S00_AXI"
+        ]
+      },
+      "axi_traffic_gen_1_M_AXI": {
+        "interface_ports": [
+          "axi_traffic_gen_1/M_AXI",
+          "axi_smc_1/S00_AXI"
         ]
       },
       "axi_traffic_gen_2_axi_periph_M00_AXI": {
@@ -645,7 +654,6 @@
           "settings_0/clk",
           "clk_manager_0/clk",
           "state_machine_0/clk",
-          "apuesta_0/clk",
           "debouncer_2/clk",
           "debouncer_1/clk",
           "debouncer_0/clk",
@@ -656,7 +664,6 @@
           "axi_smc_1/aclk",
           "rst_clk_125M/slowest_sync_clk",
           "ila_0/clk",
-          "ruleta_0/clk",
           "axi_traffic_gen_2/s_axi_aclk",
           "axi_traffic_gen_2_axi_periph/S00_ACLK",
           "axi_traffic_gen_2_axi_periph/M00_ACLK",
@@ -666,7 +673,9 @@
           "rgb_rainbow_0/clk",
           "rgb_rainbow_0/s00_axi_aclk",
           "led_controller_0/clk",
-          "rgb_controller_0/clk"
+          "rgb_controller_0/clk",
+          "apuesta_0/clk",
+          "ruleta_0/clk"
         ]
       },
       "btn_3_0_1": {
@@ -680,11 +689,11 @@
           "state_machine_0/state",
           "clk_manager_0/state",
           "settings_0/state",
-          "apuesta_0/state",
           "ila_0/probe0",
-          "ruleta_0/state",
           "led_controller_0/state",
-          "rgb_controller_0/state"
+          "rgb_controller_0/state",
+          "apuesta_0/state",
+          "ruleta_0/state"
         ]
       },
       "led_controller_0_leds": {
@@ -709,12 +718,6 @@
           "ruleta_0/stop"
         ]
       },
-      "clk_manager_0_special_clk_out": {
-        "ports": [
-          "clk_manager_0/special_clk_out",
-          "ruleta_0/special_clk_out"
-        ]
-      },
       "ruleta_0_result": {
         "ports": [
           "ruleta_0/result",
@@ -727,8 +730,8 @@
         "ports": [
           "settings_0/difficulty",
           "clk_manager_0/difficulty",
-          "ruleta_0/difficulty",
-          "rgb_controller_0/difficulty"
+          "rgb_controller_0/difficulty",
+          "ruleta_0/difficulty"
         ]
       },
       "sw_0_1": {
@@ -846,6 +849,36 @@
         "ports": [
           "result_0/win",
           "rgb_controller_0/win"
+        ]
+      },
+      "ruleta_0_dbg_ram_q": {
+        "ports": [
+          "ruleta_0/dbg_ram_q",
+          "ila_0/probe5"
+        ]
+      },
+      "ruleta_0_dbg_ram_din": {
+        "ports": [
+          "ruleta_0/dbg_ram_din",
+          "ila_0/probe4"
+        ]
+      },
+      "ruleta_0_dbg_rot_enable": {
+        "ports": [
+          "ruleta_0/dbg_rot_enable",
+          "ila_0/probe6"
+        ]
+      },
+      "ruleta_0_dbg_sel_delay": {
+        "ports": [
+          "ruleta_0/dbg_sel_delay",
+          "ila_0/probe7"
+        ]
+      },
+      "clk_manager_0_special_clk_out": {
+        "ports": [
+          "clk_manager_0/special_clk_out",
+          "ruleta_0/special_clk_out"
         ]
       }
     },
