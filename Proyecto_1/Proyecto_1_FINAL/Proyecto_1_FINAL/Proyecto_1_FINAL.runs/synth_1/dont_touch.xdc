@@ -12,17 +12,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_state_
 # IP: bd/design_1/ip/design_1_clk_manager_0_0/design_1_clk_manager_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_manager_0_0 || ORIG_REF_NAME==design_1_clk_manager_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_apuesta_0_0/design_1_apuesta_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_apuesta_0_0 || ORIG_REF_NAME==design_1_apuesta_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_settings_0_0/design_1_settings_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_settings_0_0 || ORIG_REF_NAME==design_1_settings_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ruleta_0_0/design_1_ruleta_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ruleta_0_0 || ORIG_REF_NAME==design_1_ruleta_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ruleta_0_0/src/c_shift_ram_0/c_shift_ram_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==c_shift_ram_0 || ORIG_REF_NAME==c_shift_ram_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_debouncer_0_0/design_1_debouncer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debouncer_0_0 || ORIG_REF_NAME==design_1_debouncer_0_0} -quiet] -quiet
@@ -158,6 +149,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_led_co
 
 # IP: bd/design_1/ip/design_1_rgb_controller_0_1/design_1_rgb_controller_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rgb_controller_0_1 || ORIG_REF_NAME==design_1_rgb_controller_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_Apuesta_2_0_0/design_1_Apuesta_2_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Apuesta_2_0_0 || ORIG_REF_NAME==design_1_Apuesta_2_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ruleta2_0_0/design_1_ruleta2_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ruleta2_0_0 || ORIG_REF_NAME==design_1_ruleta2_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ruleta2_0_0/src/c_shift_ram_0/c_shift_ram_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==c_shift_ram_0 || ORIG_REF_NAME==c_shift_ram_0} -quiet] -quiet
 
 # XDC: bd/design_1/ip/design_1_axi_traffic_gen_0_0/design_1_axi_traffic_gen_0_0_ooc.xdc
 

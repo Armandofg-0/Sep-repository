@@ -32,8 +32,8 @@
       "rgb_rainbow_0": "",
       "led_controller_0": "",
       "rgb_controller_0": "",
-      "apuesta_0": "",
-      "ruleta_0": ""
+      "Apuesta_2_0": "",
+      "ruleta2_0": ""
     },
     "ports": {
       "clk": {
@@ -540,16 +540,16 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_axi_traffic_gen_2_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "s00_couplers/M_AXI"
-            ]
-          },
           "axi_traffic_gen_2_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_axi_traffic_gen_2_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
             ]
           }
         },
@@ -600,40 +600,16 @@
         "vlnv": "xilinx.com:user:rgb_controller:1.0",
         "xci_name": "design_1_rgb_controller_0_1"
       },
-      "apuesta_0": {
-        "vlnv": "xilinx.com:user:apuesta:1.0",
-        "xci_name": "design_1_apuesta_0_0"
+      "Apuesta_2_0": {
+        "vlnv": "xilinx.com:user:Apuesta_2:1.0",
+        "xci_name": "design_1_Apuesta_2_0_0"
       },
-      "ruleta_0": {
-        "vlnv": "xilinx.com:user:ruleta:1.0",
-        "xci_name": "design_1_ruleta_0_0"
+      "ruleta2_0": {
+        "vlnv": "xilinx.com:user:ruleta2:1.0",
+        "xci_name": "design_1_ruleta2_0_0"
       }
     },
     "interface_nets": {
-      "axi_traffic_gen_0_M_AXI_LITE_CH1": {
-        "interface_ports": [
-          "axi_traffic_gen_0/M_AXI_LITE_CH1",
-          "axi_smc/S00_AXI"
-        ]
-      },
-      "axi_smc_1_M00_AXI": {
-        "interface_ports": [
-          "axi_smc_1/M00_AXI",
-          "rgb_rainbow_0/S00_AXI"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_traffic_gen_1/S_AXI"
-        ]
-      },
-      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
-        "interface_ports": [
-          "axi_traffic_gen_2/M_AXI_LITE_CH1",
-          "axi_traffic_gen_2_axi_periph/S00_AXI"
-        ]
-      },
       "axi_traffic_gen_1_M_AXI": {
         "interface_ports": [
           "axi_traffic_gen_1/M_AXI",
@@ -644,6 +620,30 @@
         "interface_ports": [
           "axi_traffic_gen_2_axi_periph/M00_AXI",
           "rgb_alarm_0/S00_AXI"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_traffic_gen_1/S_AXI"
+        ]
+      },
+      "axi_smc_1_M00_AXI": {
+        "interface_ports": [
+          "axi_smc_1/M00_AXI",
+          "rgb_rainbow_0/S00_AXI"
+        ]
+      },
+      "axi_traffic_gen_0_M_AXI_LITE_CH1": {
+        "interface_ports": [
+          "axi_traffic_gen_0/M_AXI_LITE_CH1",
+          "axi_smc/S00_AXI"
+        ]
+      },
+      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
+        "interface_ports": [
+          "axi_traffic_gen_2/M_AXI_LITE_CH1",
+          "axi_traffic_gen_2_axi_periph/S00_AXI"
         ]
       }
     },
@@ -674,8 +674,8 @@
           "rgb_rainbow_0/s00_axi_aclk",
           "led_controller_0/clk",
           "rgb_controller_0/clk",
-          "apuesta_0/clk",
-          "ruleta_0/clk"
+          "Apuesta_2_0/clk",
+          "ruleta2_0/clk"
         ]
       },
       "btn_3_0_1": {
@@ -692,8 +692,8 @@
           "ila_0/probe0",
           "led_controller_0/state",
           "rgb_controller_0/state",
-          "apuesta_0/state",
-          "ruleta_0/state"
+          "Apuesta_2_0/state",
+          "ruleta2_0/state"
         ]
       },
       "led_controller_0_leds": {
@@ -705,7 +705,7 @@
       },
       "apuesta_0_guess": {
         "ports": [
-          "apuesta_0/guess",
+          "Apuesta_2_0/guess",
           "ila_0/probe2",
           "result_0/apuesta",
           "led_controller_0/guess"
@@ -715,12 +715,12 @@
         "ports": [
           "clk_manager_0/stop",
           "state_machine_0/stop",
-          "ruleta_0/stop"
+          "ruleta2_0/stop"
         ]
       },
       "ruleta_0_result": {
         "ports": [
-          "ruleta_0/result",
+          "ruleta2_0/result",
           "ila_0/probe3",
           "result_0/result",
           "led_controller_0/ruleta_out"
@@ -731,13 +731,7 @@
           "settings_0/difficulty",
           "clk_manager_0/difficulty",
           "rgb_controller_0/difficulty",
-          "ruleta_0/difficulty"
-        ]
-      },
-      "sw_0_1": {
-        "ports": [
-          "sw",
-          "apuesta_0/sw"
+          "ruleta2_0/difficulty"
         ]
       },
       "btn_1_1": {
@@ -851,34 +845,40 @@
           "rgb_controller_0/win"
         ]
       },
-      "ruleta_0_dbg_ram_q": {
+      "sw_1": {
         "ports": [
-          "ruleta_0/dbg_ram_q",
-          "ila_0/probe5"
-        ]
-      },
-      "ruleta_0_dbg_ram_din": {
-        "ports": [
-          "ruleta_0/dbg_ram_din",
-          "ila_0/probe4"
-        ]
-      },
-      "ruleta_0_dbg_rot_enable": {
-        "ports": [
-          "ruleta_0/dbg_rot_enable",
-          "ila_0/probe6"
-        ]
-      },
-      "ruleta_0_dbg_sel_delay": {
-        "ports": [
-          "ruleta_0/dbg_sel_delay",
-          "ila_0/probe7"
+          "sw",
+          "Apuesta_2_0/sw"
         ]
       },
       "clk_manager_0_special_clk_out": {
         "ports": [
           "clk_manager_0/special_clk_out",
-          "ruleta_0/special_clk_out"
+          "ruleta2_0/special_clk_out"
+        ]
+      },
+      "ruleta2_0_dbg_ram_din": {
+        "ports": [
+          "ruleta2_0/dbg_ram_din",
+          "ila_0/probe4"
+        ]
+      },
+      "ruleta2_0_dbg_ram_q": {
+        "ports": [
+          "ruleta2_0/dbg_ram_q",
+          "ila_0/probe5"
+        ]
+      },
+      "ruleta2_0_dbg_rot_enable": {
+        "ports": [
+          "ruleta2_0/dbg_rot_enable",
+          "ila_0/probe6"
+        ]
+      },
+      "ruleta2_0_dbg_sel_delay": {
+        "ports": [
+          "ruleta2_0/dbg_sel_delay",
+          "ila_0/probe7"
         ]
       }
     },

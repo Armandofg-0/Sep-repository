@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Wed Oct 15 19:59:36 2025
+--Date        : Thu Oct 16 21:23:09 2025
 --Host        : Armando running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -773,15 +773,15 @@ architecture STRUCTURE of design_1 is
     rgb_B : out STD_LOGIC
   );
   end component design_1_rgb_controller_0_1;
-  component design_1_apuesta_0_0 is
+  component design_1_Apuesta_2_0_0 is
   port (
     clk : in STD_LOGIC;
     state : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
     guess : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  end component design_1_apuesta_0_0;
-  component design_1_ruleta_0_0 is
+  end component design_1_Apuesta_2_0_0;
+  component design_1_ruleta2_0_0 is
   port (
     clk : in STD_LOGIC;
     state : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -794,7 +794,7 @@ architecture STRUCTURE of design_1 is
     dbg_rot_enable : out STD_LOGIC;
     dbg_sel_delay : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  end component design_1_ruleta_0_0;
+  end component design_1_ruleta2_0_0;
   signal apuesta_0_guess : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -977,15 +977,15 @@ architecture STRUCTURE of design_1 is
   signal rgb_rainbow_0_rgb_G : STD_LOGIC;
   signal rgb_rainbow_0_rgb_R : STD_LOGIC;
   signal rst_clk_125M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal ruleta_0_dbg_ram_din : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal ruleta_0_dbg_ram_q : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal ruleta_0_dbg_rot_enable : STD_LOGIC;
-  signal ruleta_0_dbg_sel_delay : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal ruleta2_0_dbg_ram_din : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal ruleta2_0_dbg_ram_q : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal ruleta2_0_dbg_rot_enable : STD_LOGIC;
+  signal ruleta2_0_dbg_sel_delay : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal ruleta_0_result : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal settings_0_difficulty : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal settings_0_led : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal state_machine_0_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal sw_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal sw_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal vio_0_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_traffic_gen_0_done_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1011,13 +1011,13 @@ begin
   rgb_B <= rgb_controller_0_rgb_B;
   rgb_G <= rgb_controller_0_rgb_G;
   rgb_R <= rgb_controller_0_rgb_R;
-  sw_0_1(3 downto 0) <= sw(3 downto 0);
-apuesta_0: component design_1_apuesta_0_0
+  sw_1(3 downto 0) <= sw(3 downto 0);
+Apuesta_2_0: component design_1_Apuesta_2_0_0
      port map (
       clk => clk_0_1,
       guess(3 downto 0) => apuesta_0_guess(3 downto 0),
       state(1 downto 0) => state_machine_0_state(1 downto 0),
-      sw(3 downto 0) => sw_0_1(3 downto 0)
+      sw(3 downto 0) => sw_1(3 downto 0)
     );
 axi_smc: component design_1_axi_smc_0
      port map (
@@ -1364,10 +1364,10 @@ ila_0: component design_1_ila_0_0
       probe1(3 downto 0) => led_controller_0_leds(3 downto 0),
       probe2(3 downto 0) => apuesta_0_guess(3 downto 0),
       probe3(3 downto 0) => ruleta_0_result(3 downto 0),
-      probe4(3 downto 0) => ruleta_0_dbg_ram_din(3 downto 0),
-      probe5(3 downto 0) => ruleta_0_dbg_ram_q(3 downto 0),
-      probe6(0) => ruleta_0_dbg_rot_enable,
-      probe7(1 downto 0) => ruleta_0_dbg_sel_delay(1 downto 0)
+      probe4(3 downto 0) => ruleta2_0_dbg_ram_din(3 downto 0),
+      probe5(3 downto 0) => ruleta2_0_dbg_ram_q(3 downto 0),
+      probe6(0) => ruleta2_0_dbg_rot_enable,
+      probe7(1 downto 0) => ruleta2_0_dbg_sel_delay(1 downto 0)
     );
 led_controller_0: component design_1_led_controller_0_1
      port map (
@@ -1483,13 +1483,13 @@ rst_clk_125M: component design_1_rst_clk_125M_0
       peripheral_reset(0) => NLW_rst_clk_125M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => clk_0_1
     );
-ruleta_0: component design_1_ruleta_0_0
+ruleta2_0: component design_1_ruleta2_0_0
      port map (
       clk => clk_0_1,
-      dbg_ram_din(3 downto 0) => ruleta_0_dbg_ram_din(3 downto 0),
-      dbg_ram_q(3 downto 0) => ruleta_0_dbg_ram_q(3 downto 0),
-      dbg_rot_enable => ruleta_0_dbg_rot_enable,
-      dbg_sel_delay(1 downto 0) => ruleta_0_dbg_sel_delay(1 downto 0),
+      dbg_ram_din(3 downto 0) => ruleta2_0_dbg_ram_din(3 downto 0),
+      dbg_ram_q(3 downto 0) => ruleta2_0_dbg_ram_q(3 downto 0),
+      dbg_rot_enable => ruleta2_0_dbg_rot_enable,
+      dbg_sel_delay(1 downto 0) => ruleta2_0_dbg_sel_delay(1 downto 0),
       difficulty(3 downto 0) => settings_0_difficulty(3 downto 0),
       result(3 downto 0) => ruleta_0_result(3 downto 0),
       special_clk_out => clk_manager_0_special_clk_out,
